@@ -1,0 +1,28 @@
+{
+  "name": "angular6-i18n-helpers",
+  "version": "0.1.0",
+  "description": "This is a helper developed with the intent of making Angular 6 i18n a bit less tedious",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maplion/angular6-i18n-helpers.git"
+  },
+  "keywords": [
+    "angular6",
+    "i18n"
+  ],
+  "author": "Ryan Dammrose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maplion/angular6-i18n-helpers/issues"
+  },
+  "homepage": "https://github.com/maplion/angular6-i18n-helpers#readme",
+  "devDependencies": {
+    "@google-cloud/translate": "1.1.0",
+    "file-system": "^2.2.2",
+    "xml2js": "0.4.19"
+  }
+}

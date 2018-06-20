@@ -56,9 +56,10 @@ webpack                           4.8.3
 3. Copy the private_key_id (or Project Key) from the file and put it in the google-translate.js file in place of YOUR_PROJECT_ID (`const projectId = 'YOUR_PROJECT_ID'`).
 4. Install Google Translate: `npm install @google-cloud/translate --save-dev`
 5. Install xml2js: `npm install xml2js --save-dev`
-6. Install fs: `npm install fs --save-dev`
-7. Set your local environment variable to access Google Translate: (e.g. Git Bash or Linux: `export GOOGLE_APPLICATION_CREDENTIALS="/c/git/myProject/src/helpers/google-translate-credentials.json"`)
-8. Run the javascript file using: `node src/i18n/helpers/xlf-helper.js <target-language-code> [target file]` [Note: it defaults to french (i.e. `fr`) if you don't provide any language code].
+6. Install file-system: `npm install file-system --save-dev`
+7. Generate a messages.xlf file using `ng xi18n --output-path <path to locale folder>` if starting a new translation or point to an existing language file after copying over the additional translations from the messages.xlf
+8. Set your local environment variable to access Google Translate: (e.g. Git Bash or Linux: `export GOOGLE_APPLICATION_CREDENTIALS="/c/git/screenings-plus/src/i18n/helpers/google-translate-credentials.json"`)
+9. Run the javascript file using: `node src/i18n/helpers/xlf-helper.js <target-language-code> [language messages.<language>.xlf file]` [Note: it defaults to french (i.e. `fr`) if you don't provide any language code].
 
 ## Things I hope to add
 1. A way to automatically copy diffs between the generated messages.xlf and the desired messages.<language>.xlf.
