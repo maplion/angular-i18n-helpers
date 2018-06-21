@@ -63,4 +63,4 @@ webpack                           4.8.3
 
 ## Things I hope to add
 1. A way to automatically copy diffs between the generated messages.xlf and the desired messages.<language>.xlf.
-
+2. Fix it so that interpolations that are in the middle of a text don't get replaced at the end of the content.
