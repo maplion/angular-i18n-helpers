@@ -104,7 +104,7 @@ async function createDeveloperFile(transUnit, target) {
                 if (!transUnit[i]['target']) {
                     transUnit[i]['target'] = { ...transUnit[i].source[0]
                     };
-                    await translate.translate(transUnit[i].source[0]._, target)
+                    await translate.translate([transUnit[i].source[0]._], target)
                         .then(result => {
                             let temp = [];
                             result.split('\n').forEach(element => {
