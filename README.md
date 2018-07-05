@@ -23,8 +23,9 @@ This is designed with a few assumptions in mind:
 4. That you'll use the Google Translate API and already have a project set up as described here: https://cloud.google.com/translate/docs/reference/libraries#client-libraries-resources-nodejs
 5. This is intended to be run from within an existing project.  For example, the helpers folder is expected to be at the same level as (a sibling to) your locale folder, wherever it exists.
 6. This assumes that anything with a <target> tag has already been translated and they are ignored.
-7. I don't think it is required, but this works best with @@ persistence tags. 
-8. An equivalent version setup is used as the following (`ng version` at the time of this posting):
+7. I don't think it is required, but this works best with @@ persistence tags.
+8. It is assumed that the developer file is in the locale folder and that the files for translators are in the files-for-translation folder.
+9. An equivalent version setup is used as the following (`ng version` at the time of this posting):
 ```
 Angular CLI: 6.0.8
 Node: 8.11.3
@@ -58,8 +59,8 @@ webpack                           4.8.3
 5. Install xml2js: `npm install xml2js --save-dev`
 6. Install file-system: `npm install file-system --save-dev`
 7. Generate a messages.xlf file using `ng xi18n --output-path <path to locale folder>` if starting a new translation or point to an existing language file after copying over the additional translations from the messages.xlf
-8. Set your local environment variable to access Google Translate: (e.g. Git Bash or Linux: `export GOOGLE_APPLICATION_CREDENTIALS="/c/git/screenings-plus/src/i18n/helpers/google-translate-credentials.json"`)
-9. Run the javascript file using: `node src/i18n/helpers/xlf-helper.js <target-language-code> [language messages.<language>.xlf file]` [Note: it defaults to french (i.e. `fr`) if you don't provide any language code].
+8. Set your local environment variable to access Google Translate: (e.g. Git Bash or Linux: `export GOOGLE_APPLICATION_CREDENTIALS="/c/git/myProject/src/i18n/helpers/google-translate-credentials.json"`)
+9. Run the javascript file using: `node src/i18n/helpers/xlf-helper.js <target-language-code> [language messages.<language>.xlf file]` [Note: it defaults to french (i.e. `fr`) if you don't provide any language code]. Example: `node src/i18n/helpers/xlf-helper.js fr messages.fr-CA.xlf`.
 
 ## Things I hope to add
 1. A way to automatically copy diffs between the generated messages.xlf and the desired messages.<language>.xlf.
