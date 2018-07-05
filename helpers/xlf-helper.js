@@ -58,20 +58,23 @@ fs.readFile(__dirname + defaultDeveloperXlfFilePath + xlfFile, function (err, da
             const builder = new xml2js.Builder();
             // Write file for translators with empty targets
             const xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
-            writeTranslationFile(defaultTranslatorXlfFilePath + 'messages.', xmlFileForTranslators, target);
+            writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
 
-            // Only write a new locale file if not updating an existing
-            if (xlfFile === defaultMessagesXlfFile) {
-                // Write file for development with Google-Translated elements
-                const xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
-                writeTranslationFile(defaultDeveloperXlfFilePath + 'messages.', xmlFileForDevelopment, target);
-            }
+            // Write file for development with Google-Translated elements
+            const xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
+            writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
         });
     });
 });
 
 async function writeTranslationFile(relativePath, xml, target) {
-    const filePath = relativePath + target + '.xlf';
+    // Only write a new locale file if not updating an existing
+    let filePath;
+    if (xlfFile === defaultMessagesXlfFile) {
+        filePath = relativePath + 'messages.' + target + '.xlf';
+    } else {
+        filePath = relativePath + xlfFile;
+    }
     fs.writeFile(__dirname + filePath, xml, function (err) {
         if (err) {
             return console.log(err);
@@ -86,31 +89,31 @@ async function createDeveloperFile(transUnit, target) {
         if (transUnit.hasOwnProperty(i)) {
             if (transUnit[i].source[0]._) {
                 // console.log(`${i} -> ${transUnit[i].source[0]._}`);
+                // Clean empty space in source
+                transUnit[i]['source'][0]._ = trimAndRemoveNewLines(transUnit[i]['source'][0]._)
+                // If there is no target, add one and translate it; otherwise, clean empty space
                 if (!transUnit[i]['target']) {
                     transUnit[i]['target'] = { ...transUnit[i].source[0]
                     };
                     await translate.translate([transUnit[i].source[0]._], target)
                         .then(result => {
-                            const temp = [];
-                            result.split('\n').forEach(element => {
-                                temp.push(element.trim());
-                            });
-                            transUnit[i]['target']._ = temp.join(' ');
+                            transUnit[i]['target']._ = trimAndRemoveNewLines(result);
                         });
                     // console.log(`Created target for: ${transUnit[i].source[0]._}`)
+                } else {
+                    transUnit[i]['target'][0]._ = trimAndRemoveNewLines(transUnit[i]['target'][0]._)
                 }
             } else {
                 // console.log(`${i} -> ${transUnit[i].source}`);
+                transUnit[i]['source'][0] = trimAndRemoveNewLines(transUnit[i]['source'][0])
                 if (!transUnit[i]['target']) {
                     await translate.translate(transUnit[i].source, target)
                         .then(result => {
-                            let temp = [];
-                            result.split('\n').forEach(element => {
-                                temp.push(element.trim());
-                            });
-                            transUnit[i]['target'] = temp.join(' ');
+                            transUnit[i]['target'] = trimAndRemoveNewLines(result);
                         });
                     // console.log(`Created target for: ${transUnit[i].source}`)
+                } else {
+                    transUnit[i]['target'][0] = trimAndRemoveNewLines(transUnit[i]['target'][0])
                 }
             }
         }
@@ -147,4 +150,12 @@ function createBlankTranslatorFile(jsonFileForTranslators) {
             }
         }
     }
+}
+
+function trimAndRemoveNewLines(inputString) {
+    let temp = [];
+    inputString.split('\n').forEach(element => {
+        temp.push(element.trim());
+    });
+    return temp.join(' ');
 }
