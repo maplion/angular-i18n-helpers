@@ -5,6 +5,7 @@
 const fs = require('file-system');
 const xml2js = require('xml2js');
 const translate = require('./translate-helper');
+const xlfDiff = require('./xlf-diff');
 
 const defaultTarget = 'fr';
 const defaultMessagesXlfFile = 'messages.xlf';
@@ -27,45 +28,55 @@ if (!process.argv[3]) {
 }
 
 // Create parse object
-const parser = new xml2js.Parser();
+// const parser = new xml2js.Parser();
 
 // Parse XML to JSON and Update JSON with appropriate targets targets
-fs.readFile(__dirname + defaultDeveloperXlfFilePath + xlfFile, function (err, data) {
-    // console.log(__dirname + xlfFile);
-    parser.parseString(data, function (err, result) {
-        // Print the xmlFileForTranslators to console
-        // console.log(inspect(result, false, null))
-        const jsonString = JSON.stringify(result);
-        const jsonFileForTranslators = JSON.parse(jsonString);
-        const jsonFileForDevelopment = JSON.parse(jsonString);
+// fs.readFile(__dirname + defaultDeveloperXlfFilePath + xlfFile, function (err, data) {
+// console.log(__dirname + xlfFile);
+// parser.parseString(data, function (err, result) {
+// Print the xmlFileForTranslators to console
+// console.log(inspect(result, false, null))
+// const jsonString = JSON.stringify(result);
+// const jsonFileForTranslators = JSON.parse(jsonString);
+// const jsonFileForDevelopment = JSON.parse(jsonString);
+let jsonFileForTranslators;
+let jsonFileForDevelopment;
+syncFiles().then(jsonObject => {
+    jsonFileForTranslators = jsonObject;
+    jsonFileForDevelopment = jsonObject;
 
-        // Write out intermediate json file
-        // fs.writeFile(__dirname + '/../locale/test.json', jsonString, function (err) {
-        //     if (err) {
-        //         return console.log(err);
-        //     }
-
-        //     console.log('The file was saved!');
-        //     console.log('Done');
-        // });
-
-        // Create Translator File
-        createTranslatorFile(jsonFileForTranslators);
-        // Write out file for development with Google-translated targets on sources without a target
-        const transUnit = jsonFileForDevelopment.xliff.file[0].body[0]['trans-unit'];
-        createDeveloperFile(transUnit, target).then(() => {
-            // Create builder instance
-            const builder = new xml2js.Builder();
-            // Write file for translators with empty targets
-            const xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
-            writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
-
-            // Write file for development with Google-Translated elements
-            const xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
-            writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
-        });
+    // Write out intermediate json file
+    // fs.writeFile(__dirname + '/../locale/test.json', jsonString, function (err) {
+    //     if (err) {
+    //         return console.log(err);
+    //     }
+    
+    //     console.log('The file was saved!');
+    //     console.log('Done');
+    // });
+    
+    // Create Translator File
+    createTranslatorFile(jsonFileForTranslators);
+    // Write out file for development with Google-translated targets on sources without a target
+    const transUnit = jsonFileForDevelopment.xliff.file[0].body[0]['trans-unit'];
+    createDeveloperFile(transUnit, target).then(() => {
+        // Create builder instance
+        const builder = new xml2js.Builder();
+        // Write file for translators with empty targets
+        const xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
+        writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
+    
+        // Write file for development with Google-Translated elements
+        const xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
+        writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
     });
+    // });
+    // });
 });
+
+async function syncFiles() {
+    return await xlfDiff.syncTranslateFiles(defaultDeveloperXlfFilePath + defaultMessagesXlfFile, defaultDeveloperXlfFilePath + xlfFile);
+}
 
 async function writeTranslationFile(relativePath, xml, target) {
     // Only write a new locale file if not updating an existing

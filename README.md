@@ -12,9 +12,6 @@ After learning how to use i18n, I found some issues that made the process tediou
 the line is replaced, it ends up with a lot of &nbsp; spacing in between all areas where there was a line break.
 2. Interpolated values are ignored (not fully tested, but it works for my purposes at the moment).
 
-## Who this was made for
-This was developed with my needs in mind, but could be developed for general public use with some additional features (you can fork it and make it your own, or help improve this, but at least it gives a head start).
-
 ## Assumptions
 This is designed with a few assumptions in mind:
 1. You're using standard messages.xlf files and following the i18n standards given here: https://angular.io/guide/i18n
@@ -23,7 +20,7 @@ This is designed with a few assumptions in mind:
 4. That you'll use the Google Translate API and already have a project set up as described here: https://cloud.google.com/translate/docs/reference/libraries#client-libraries-resources-nodejs
 5. This is intended to be run from within an existing project.  For example, the helpers folder is expected to be at the same level as (a sibling to) your locale folder, wherever it exists.
 6. This assumes that anything with a <target> tag has already been translated and they are ignored.
-7. I don't think it is required, but this works best with @@ persistence tags.
+7. That you are utilizing @@ persistence tags. 
 8. It is assumed that the developer file is in the locale folder and that the files for translators are in the files-for-translation folder.
 9. An equivalent version setup is used as the following (`ng version` at the time of this posting):
 ```
@@ -52,16 +49,19 @@ webpack                           4.8.3
 ```
 
 ## Usage Directions
+Note: Between the lines has already been done, but is left here for documentation
+-------------------------------------------------------------
 1. If you haven't already, set up a Google Translate API Project: https://cloud.google.com/translate/docs/reference/libraries#client-libraries-resources-nodejs
 2. When setting up the Google Translate API Project, you should receive a json file; rename it to `google-translate-credentials.json` and overwrite the placeholder in the files that you have downloaded from this project.
 3. Copy the private_key_id (or Project Key) from the file and put it in the google-translate.js file in place of YOUR_PROJECT_ID (`const projectId = 'YOUR_PROJECT_ID'`).
 4. Install Google Translate: `npm install @google-cloud/translate --save-dev`
 5. Install xml2js: `npm install xml2js --save-dev`
 6. Install file-system: `npm install file-system --save-dev`
-7. Generate a messages.xlf file using `ng xi18n --output-path <path to locale folder>` if starting a new translation or point to an existing language file after copying over the additional translations from the messages.xlf
-8. Set your local environment variable to access Google Translate: (e.g. Git Bash or Linux: `export GOOGLE_APPLICATION_CREDENTIALS="/c/git/myProject/src/i18n/helpers/google-translate-credentials.json"`)
+-------------------------------------------------------------
+7. Generate a messages.xlf file using `ng xi18n --output-path i18n/locale` if starting a new translation or point to an existing language file after copying over the additional translations from the messages.xlf
+8. Set your local environment variable to access Google Translate: (e.g. Git Bash or Linux: `export GOOGLE_APPLICATION_CREDENTIALS="/c/git/screenings-plus/src/i18n/helpers/google-translate-credentials.json"`)
 9. Run the javascript file using: `node src/i18n/helpers/xlf-helper.js <target-language-code> [language messages.<language>.xlf file]` [Note: it defaults to french (i.e. `fr`) if you don't provide any language code]. Example: `node src/i18n/helpers/xlf-helper.js fr messages.fr-CA.xlf`.
 
 ## Things I hope to add
-1. A way to automatically copy diffs between the generated messages.xlf and the desired messages.<language>.xlf.
-2. Fix it so that interpolations that are in the middle of a text don't get replaced at the end of the content.
+1. Fix it so that interpolations that are in the middle of a text don't get replaced at the end of the content.
+

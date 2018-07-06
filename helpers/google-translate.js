@@ -3,7 +3,7 @@ const Translate = require('@google-cloud/translate');
 
 function getClient() {
     // Your Google Cloud Platform project ID
-    const projectId = 'YOUR_PRIVATE_KEY_ID';
+    const projectId = 'bac76e25e74d770f7bcb42110d91af6d25f37125';
 
     // Instantiates a client
     const translate = new Translate({
