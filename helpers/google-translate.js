@@ -15,17 +15,21 @@ function getClient() {
 
 // Translates some text into the Language of choice
 async function translate(translator, text, target) {
-    return await translator.translate(text, target)
-        .then(results => {
-            const translation = results[0][0];
-
-            // console.log(`Text: ${text}`);
-            // console.log(`Translation: ${translation}`);
-            return translation;
-        })
-        .catch(err => {
-            console.error('ERROR:', err);
-        });
+    let translation;
+    return await new Promise(resolve => {
+        translator.translate(text, target)
+            .then(results => {
+                translation = results[0][0];
+                // console.log(`Text: ${text}`);
+                // console.log(`Translation: ${translation}`);
+                resolve();
+            })
+            .catch(err => {
+                console.error('ERROR:', err);
+            });
+    }).then(() => {
+        return translation;
+    });
 }
 
 module.exports = {

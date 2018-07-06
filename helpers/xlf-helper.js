@@ -27,23 +27,9 @@ if (!process.argv[3]) {
     xlfFile = process.argv[3];
 }
 
-// Create parse object
-// const parser = new xml2js.Parser();
-
-// Parse XML to JSON and Update JSON with appropriate targets targets
-// fs.readFile(__dirname + defaultDeveloperXlfFilePath + xlfFile, function (err, data) {
-// console.log(__dirname + xlfFile);
-// parser.parseString(data, function (err, result) {
-// Print the xmlFileForTranslators to console
-// console.log(inspect(result, false, null))
-// const jsonString = JSON.stringify(result);
-// const jsonFileForTranslators = JSON.parse(jsonString);
-// const jsonFileForDevelopment = JSON.parse(jsonString);
-let jsonFileForTranslators;
-let jsonFileForDevelopment;
 syncFiles().then(jsonObject => {
-    jsonFileForTranslators = jsonObject;
-    jsonFileForDevelopment = jsonObject;
+    const jsonFileForTranslators = JSON.parse(JSON.stringify(jsonObject));
+    const jsonFileForDevelopment = JSON.parse(JSON.stringify(jsonObject));
 
     // Write out intermediate json file
     // fs.writeFile(__dirname + '/../locale/test.json', jsonString, function (err) {
@@ -56,22 +42,21 @@ syncFiles().then(jsonObject => {
     // });
     
     // Create Translator File
-    createTranslatorFile(jsonFileForTranslators);
-    // Write out file for development with Google-translated targets on sources without a target
-    const transUnit = jsonFileForDevelopment.xliff.file[0].body[0]['trans-unit'];
-    createDeveloperFile(transUnit, target).then(() => {
-        // Create builder instance
-        const builder = new xml2js.Builder();
-        // Write file for translators with empty targets
-        const xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
-        writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
-    
-        // Write file for development with Google-Translated elements
-        const xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
-        writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
+    createTranslatorFile(jsonFileForTranslators).then(() => {
+        // Write out file for development with Google-translated targets on sources without a target
+        const transUnit = jsonFileForDevelopment.xliff.file[0].body[0]['trans-unit'];
+        createDeveloperFile(transUnit, target).then(() => {
+            // Create builder instance
+            const builder = new xml2js.Builder();
+            // Write file for translators with empty targets
+            const xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
+            writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
+        
+            // Write file for development with Google-Translated elements
+            const xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
+            writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
+        });
     });
-    // });
-    // });
 });
 
 async function syncFiles() {
@@ -104,8 +89,7 @@ async function createDeveloperFile(transUnit, target) {
                 transUnit[i]['source'][0]._ = trimAndRemoveNewLines(transUnit[i]['source'][0]._)
                 // If there is no target, add one and translate it; otherwise, clean empty space
                 if (!transUnit[i]['target']) {
-                    transUnit[i]['target'] = { ...transUnit[i].source[0]
-                    };
+                    transUnit[i]['target'] = transUnit[i].source[0];
                     await translate.translate([transUnit[i].source[0]._], target)
                         .then(result => {
                             transUnit[i]['target']._ = trimAndRemoveNewLines(result);
@@ -135,7 +119,7 @@ async function createTranslatorFile(jsonFileForTranslators) {
     // Write out file for translators with targets filled with English on sources without a target
     // Note: translates english to english just for ease of implementation; can be adjusted later.
     const transUnit = jsonFileForTranslators.xliff.file[0].body[0]['trans-unit'];
-    createDeveloperFile(transUnit, 'en');
+    await createDeveloperFile(transUnit, 'en');
 }
 
 function createBlankTranslatorFile(jsonFileForTranslators) {
@@ -146,9 +130,7 @@ function createBlankTranslatorFile(jsonFileForTranslators) {
             if (transUnit[i].source[0]._) {
                 // console.log(`${i} -> ${transUnit[i].source[0]._}`);
                 if (!transUnit[i]['target']) {
-                    transUnit[i]['target'] = {
-                        ...transUnit[i].source[0]
-                    };
+                    transUnit[i]['target'] = transUnit[i].source[0];
                     transUnit[i]['target']._ = ' ';
                     // console.log(`Created target for: ${transUnit[i].source[0]._}`)
                 }

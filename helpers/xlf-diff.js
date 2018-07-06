@@ -8,6 +8,7 @@ let targetMessagesFile;
 const parser = new xml2js.Parser();
 
 async function syncTranslateFiles(sourcePath, targetPath) {
+    let targetMessagesFile;
     return await new Promise(resolve => {
         fs.readFile(__dirname + sourcePath, async function (err, sourceData) {
             await parser.parseString(sourceData, async function (err2, result) {
@@ -59,7 +60,7 @@ async function syncTranslateFiles(sourcePath, targetPath) {
                 });
             });
         });
-    }).then(result => {
+    }).then(() => {
         return targetMessagesFile;
     });
 }
