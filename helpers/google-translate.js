@@ -20,6 +20,7 @@ async function translate(translator, text, target) {
         translator.translate(text, target)
             .then(results => {
                 translation = results[0][0];
+                // console.log(`Target: ${target}`)
                 // console.log(`Text: ${text}`);
                 // console.log(`Translation: ${translation}`);
                 resolve();
