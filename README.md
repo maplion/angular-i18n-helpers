@@ -28,6 +28,7 @@ This is designed with a few assumptions in mind:
 7. That you are utilizing @@ persistence tags. 
 8. It is assumed that the developer file is in the locale folder and that the files for translators are in the files-for-translation folder.
 9. An equivalent version setup is used as the following (`ng version` at the time of this posting):
+10. It is assumed that you have already copied your `messages.xlf` file to the language file of your choice (e.g. `messages.xlf` => `messages.fr-CA.xlf`).  This is currently required to work on the first run.
 ```
 Angular CLI: 6.0.8
 Node: 8.11.3
@@ -68,4 +69,6 @@ webpack                           4.8.3
 and then typing `npm run i18n` whenever you wish to run it.
 ## Things I hope to add
 1. Fix it so that interpolations that are in the middle of a text don't get replaced at the end of the content.
+2. Make it so if files don't exist, they care copied automatically on first run.
+3. Add better error-handling.
 
