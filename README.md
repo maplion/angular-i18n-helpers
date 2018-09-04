@@ -68,7 +68,7 @@ webpack                           4.8.3
 `"i18n": "ng xi18n --output-path i18n/locale && node src/i18n/helpers/xlf-helper.js fr messages.fr-FR.xlf && node src/i18n/helpers/xlf-helper.js fr messages.fr-CA.xlf && node src/i18n/helpers/xlf-helper.js es messages.es-MX.xlf",`
 and then typing `npm run i18n` whenever you wish to run it.
 ## Things I hope to add
-1. Fix it so that interpolations that are in the middle of a text don't get replaced at the end of the content.
+1. Fix it so that multiple interpolations within a single tag are supported.
 2. Make it so if files don't exist, they care copied automatically on first run.
 3. Add better error-handling.
 

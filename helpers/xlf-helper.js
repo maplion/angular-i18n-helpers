@@ -36,11 +36,11 @@ syncFiles().then(jsonObject => {
     //     if (err) {
     //         return console.log(err);
     //     }
-    
+
     //     console.log('The file was saved!');
     //     console.log('Done');
     // });
-    
+
     // Create Translator File
     createTranslatorFile(jsonFileForTranslators).then(() => {
         // Write out file for development with Google-translated targets on sources without a target
@@ -49,11 +49,13 @@ syncFiles().then(jsonObject => {
             // Create builder instance
             const builder = new xml2js.Builder();
             // Write file for translators with empty targets
-            const xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
+            let xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
+            xmlFileForTranslators = fixInterpolationLessAndGreaterThans(xmlFileForTranslators);
             writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
-        
+
             // Write file for development with Google-Translated elements
-            const xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
+            let xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
+            xmlFileForDevelopment = fixInterpolationLessAndGreaterThans(xmlFileForDevelopment);
             writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
         });
     });
@@ -83,6 +85,7 @@ async function writeTranslationFile(relativePath, xml, target) {
 async function createDeveloperFile(transUnit, target) {
     for (const i in transUnit) {
         if (transUnit.hasOwnProperty(i)) {
+            // Properties with interpolations
             if (transUnit[i].source[0]._) {
                 // console.log(`${i} -> ${transUnit[i].source[0]._}`);
                 // Clean empty space in source
@@ -93,11 +96,16 @@ async function createDeveloperFile(transUnit, target) {
                     await translate.translate([transUnit[i].source[0]._], target)
                         .then(result => {
                             transUnit[i]['target']._ = trimAndRemoveNewLines(result);
+                            // Reset Interpolations
+                            transUnit[i] = reinjectInterpolations(transUnit[i]);
                         });
                     // console.log(`Created target for: ${transUnit[i].source[0]._}`)
                 } else {
                     transUnit[i]['target'][0]._ = trimAndRemoveNewLines(transUnit[i]['target'][0]._)
+                    // Reset Interpolations
+                    transUnit[i] = reinjectInterpolations(transUnit[i]);
                 }
+                // Properties with no tags
             } else {
                 // console.log(`${i} -> ${transUnit[i].source}`);
                 transUnit[i]['source'][0] = trimAndRemoveNewLines(transUnit[i]['source'][0])
@@ -151,4 +159,23 @@ function trimAndRemoveNewLines(inputString) {
         temp.push(element.trim());
     });
     return temp.join(' ');
+}
+
+function reinjectInterpolations(transUnit) {
+    transUnit['source'] = replaceInterpolationTag(transUnit['source'])
+    transUnit['target'] = replaceInterpolationTag(transUnit['target'])
+    return transUnit;
+}
+
+function replaceInterpolationTag(transUnitPartialObject) {
+    const equivText = transUnitPartialObject[0]['x'][0]['$']['equiv-text'];
+    const interpolation = `<x id="INTERPOLATION" equiv-text="${equivText}"/>`
+    transUnitPartialObject[0] = transUnitPartialObject[0]._.replace('~~', interpolation);
+    return transUnitPartialObject;
+}
+
+// The replaceInterpolationTag less than and greater than get converted into &lt; and &gt;
+// This is a regex function to replace them all with actual < and >
+function fixInterpolationLessAndGreaterThans(xmlFile) {
+    return xmlFile.split('&lt;').join('<').split('&gt;').join('>');
 }
