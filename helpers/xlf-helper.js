@@ -14,12 +14,15 @@ const defaultDeveloperXlfFilePath = '/../';
 const defaultTranslatorXlfFilePath = '/../files-for-translation/';
 let xlfFile;
 let target;
+let translationFileTarget;
 
 // Get commandline arguments and/or set defaults
 if (!process.argv[2]) {
     target = defaultTarget;
+    translationFileTarget = defaultTarget;
 } else {
-    target = process.argv[2];
+    target = process.argv[2].length > 2 ? process.argv[2].split('-')[0] : process.argv[2];
+    translationFileTarget = process.argv[2];
 }
 
 if (!process.argv[3]) {
@@ -35,15 +38,15 @@ if (!process.argv[4]) {
 }
 
 const printArguments = () => {
-    console.log('First Arg', process.argv[0]);
-    console.log('Second Arg', process.argv[1]);
-    console.log('target', target);
-    console.log('xlfFile', xlfFile);
-    console.log('translator', translator);
+    // console.log('First Arg:', process.argv[0]);
+    // console.log('Second Arg:', process.argv[1]);
+    console.log('target: ', target);
+    console.log('xlfFile: ', xlfFile);
+    console.log('translator: ', translator);
 }
 
 const syncFiles = async () => {
-    // printArguments();
+    printArguments();
     return await xlfDiff.syncTranslateFiles(defaultDeveloperXlfFilePath +
         defaultMessagesXlfFile, defaultDeveloperXlfFilePath + xlfFile);
 }
@@ -96,7 +99,7 @@ const writeTranslationFile = async (relativePath, xml, target) => {
     // Only write a new locale file if not updating an existing
     let filePath;
     if (xlfFile === defaultMessagesXlfFile) {
-        filePath = relativePath + 'messages.' + target + '.xlf';
+        filePath = relativePath + 'messages.' + translationFileTarget + '.xlf';
     } else {
         filePath = relativePath + xlfFile;
     }
@@ -119,7 +122,7 @@ const createDeveloperFile = async (transUnit, target, translator) => {
                 // If there is no target, add one and translate it; otherwise, clean empty space
                 if (!transUnit[i]['target']) {
                     transUnit[i]['target'] = transUnit[i].source[0];
-                    await translate.translate([transUnit[i].source[0]._], target, translator)
+                    await translate.getTranslation([transUnit[i].source[0]._], target, translator)
                         .then(result => {
                             transUnit[i]['target']._ = trimAndRemoveNewLines(result);
                             // Reset Interpolations
@@ -139,7 +142,7 @@ const createDeveloperFile = async (transUnit, target, translator) => {
             // console.log(`${i} -> ${transUnit[i].source}`);
             transUnit[i]['source'][0] = trimAndRemoveNewLines(transUnit[i]['source'][0])
             if (!transUnit[i]['target']) {
-                await translate.translate(transUnit[i].source, target, translator)
+                await translate.getTranslation(transUnit[i].source, target, translator)
                     .then(result => {
                         transUnit[i]['target'] = trimAndRemoveNewLines(result);
                     }).catch(error => {
@@ -186,9 +189,11 @@ const createBlankTranslatorFile = (jsonFileForTranslators) => {
 
 const trimAndRemoveNewLines = (inputString) => {
     let temp = [];
-    inputString.split('\n').forEach(element => {
-        temp.push(element.trim());
-    });
+    if (inputString === typeof string) {
+        inputString.split('\n').forEach(element => {
+            temp.push(element.trim());
+        });
+    }
     return temp.join(' ');
 }
 

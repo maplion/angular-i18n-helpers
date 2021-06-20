@@ -1,25 +1,34 @@
-const AWS = require('aws-sdk');
-const translate = new AWS.Translate();
+const {
+    TranslateClient,
+    TranslateTextCommand
+} = require("@aws-sdk/client-translate");
 
-export const getClient = async () => {
+const getClient = () => {
     const client = new TranslateClient({
-        region: "us-east-1"
+        region: "us-east-1",
     });
     return client;
 }
 
 // Translates some text into the Language of choice
-export const translate = async (translateClient, text, target) => {
+const translate = async (client, text, target) => {
+    console.log('TEXT :', text);
+    console.log('TEXT :', text);
+    console.log('TEXT :', text);
+    console.log('TEXT :', text);
+    console.log('TEXT :', text);
+    if (!text[0]) {
+        return ' ';
+    }
     let translation;
     const params = {
         SourceLanguageCode: 'en',
         TargetLanguageCode: target,
-        TerminologyNames: [],
-        Text: text
+        Text: text[0]
     }
-    const command = new CreateParallelDataCommand(params);
+    const command = new TranslateTextCommand(params);
     return await new Promise(resolve => {
-        translateClient.send(command)
+        client.send(command)
             .then(
                 (data) => {
                     console.log(data);
@@ -37,4 +46,9 @@ export const translate = async (translateClient, text, target) => {
     }).catch(error => {
         console.log('ERROR: ', error.message, error);
     });
+}
+
+module.exports = {
+    getClient,
+    translate
 }

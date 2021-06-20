@@ -1,5 +1,5 @@
 // Imports the Google Cloud client library
-import Translate from '@google-cloud/translate';
+const Translate = require('@google-cloud/translate');
 
 const getClient = () => {
     // Your Google Cloud Platform project ID
@@ -35,7 +35,7 @@ const translate = async (translateClient, text, target) => {
     });
 }
 
-export default {
+module.exports = {
     translate,
     getClient
 }
