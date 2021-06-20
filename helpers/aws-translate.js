@@ -1,7 +1,5 @@
-import {
-    Translate
-} from 'aws-sdk';
-const translate = new Translate();
+const AWS = require('aws-sdk');
+const translate = new AWS.Translate();
 
 export const getClient = async () => {
     const client = new TranslateClient({
@@ -31,8 +29,12 @@ export const translate = async (translateClient, text, target) => {
                 (error) => {
                     console.log(error, error.stack);
                 }
-            );
+            ).catch(error => {
+                console.log('ERROR: ', error.message, error);
+            });
     }).then(() => {
         return translation;
+    }).catch(error => {
+        console.log('ERROR: ', error.message, error);
     });
 }

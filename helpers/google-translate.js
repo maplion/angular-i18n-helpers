@@ -30,6 +30,8 @@ const translate = async (translateClient, text, target) => {
             });
     }).then(() => {
         return translation;
+    }).catch(error => {
+        console.log('ERROR: ', error.message, error);
     });
 }
 

@@ -8,16 +8,22 @@ let targetMessagesFile;
 const parser = new xml2js.Parser();
 
 const syncTranslateFiles = async (sourcePath, targetPath) => {
+    // console.log('SOURCE PATH: ', sourcePath);
+    // console.log('TARGET PATH: ', targetPath);
     let targetMessagesFile;
     return await new Promise(resolve => {
-        fs.readFile(__dirname + sourcePath, 'utf8', async function (err, sourceData) {
-            parser.parseString(sourceData, async function (err2, result) {
+        fs.readFile(__dirname + sourcePath, 'utf8', async (err, sourceData) => {
+            // console.log('SOURCE DATA: ', sourceData);
+            if (!sourceData) {
+                throw Error('Source Data is missing or incorrect path to Source Data');
+            }
+            parser.parseString(sourceData, async (err2, result) => {
                 sourceMessagesFile = JSON.parse(JSON.stringify(result));
                 const sourceMessagesFileTransUnit = sourceMessagesFile.xliff.file[0].body[0]['trans-unit'];
                 let targetMessagesFileTransUnit;
-                await fs.readFile(__dirname + targetPath, 'utf8', async function (err3, targetData) {
+                await fs.readFile(__dirname + targetPath, 'utf8', async (err3, targetData) => {
                     targetData = tagInterpolations(targetData);
-                    parser.parseString(targetData, async function (err4, result2) {
+                    parser.parseString(targetData, async (err4, result2) => {
                         targetMessagesFile = JSON.parse(JSON.stringify(result2));
                         targetMessagesFileTransUnit = targetMessagesFile.xliff.file[0].body[0]['trans-unit'];
 
@@ -37,7 +43,7 @@ const syncTranslateFiles = async (sourcePath, targetPath) => {
                         });
 
                         // Loop through in reverse to remove any tags that are no longer in the source file
-                        await targetMessagesFileTransUnit.forEach(async function (item, index) {
+                        await targetMessagesFileTransUnit.forEach(async (item, index) => {
                             let idFound = false;
                             await sourceMessagesFileTransUnit.forEach(sourceElement => {
                                 if (item.$.id === sourceElement.$.id) {
@@ -59,10 +65,12 @@ const syncTranslateFiles = async (sourcePath, targetPath) => {
                         resolve();
                     });
                 });
-            });
+            })
         });
     }).then(() => {
         return targetMessagesFile;
+    }).catch(error => {
+        console.log('ERROR: ', error.message, error);
     });
 }
 

@@ -24,9 +24,13 @@ const translateWithAws = async (text, target) => {
                 // console.log(result);
                 translation = result;
                 resolve();
+            }).catch(error => {
+                console.log('ERROR: ', error.message, error);
             });
     }).then(() => {
         return translation;
+    }).catch(error => {
+        console.log('ERROR: ', error.message, error);
     });
 }
 
@@ -39,6 +43,6 @@ const translate = async (text, target, translator) => {
     }
 }
 
-export default {
+module.exports = {
     translate
 }
