@@ -8,6 +8,7 @@ const translate = require('./translate-helper');
 const xlfDiff = require('./xlf-diff');
 
 const defaultTarget = 'fr';
+const defaultTranslator = 'aws';
 const defaultMessagesXlfFile = 'messages.xlf';
 const defaultDeveloperXlfFilePath = '/../locale/';
 const defaultTranslatorXlfFilePath = '/../files-for-translation/';
@@ -27,6 +28,12 @@ if (!process.argv[3]) {
     xlfFile = process.argv[3];
 }
 
+if (!process.argv[4]) {
+    translator = defaultTranslator;
+} else {
+    translator = process.argv[4];
+}
+
 syncFiles().then(jsonObject => {
     const jsonFileForTranslators = JSON.parse(JSON.stringify(jsonObject));
     const jsonFileForDevelopment = JSON.parse(JSON.stringify(jsonObject));
@@ -42,10 +49,10 @@ syncFiles().then(jsonObject => {
     // });
 
     // Create Translator File
-    createTranslatorFile(jsonFileForTranslators).then(() => {
+    createTranslatorFile(jsonFileForTranslators, translator).then(() => {
         // Write out file for development with Google-translated targets on sources without a target
         const transUnit = jsonFileForDevelopment.xliff.file[0].body[0]['trans-unit'];
-        createDeveloperFile(transUnit, target).then(() => {
+        createDeveloperFile(transUnit, target, translator).then(() => {
             // Create builder instance
             const builder = new xml2js.Builder();
             // Write file for translators with empty targets
@@ -61,11 +68,11 @@ syncFiles().then(jsonObject => {
     });
 });
 
-async function syncFiles() {
+const syncFiles = async () => {
     return await xlfDiff.syncTranslateFiles(defaultDeveloperXlfFilePath + defaultMessagesXlfFile, defaultDeveloperXlfFilePath + xlfFile);
 }
 
-async function writeTranslationFile(relativePath, xml, target) {
+const writeTranslationFile = async (relativePath, xml, target) => {
     // Only write a new locale file if not updating an existing
     let filePath;
     if (xlfFile === defaultMessagesXlfFile) {
@@ -82,7 +89,7 @@ async function writeTranslationFile(relativePath, xml, target) {
     });
 }
 
-async function createDeveloperFile(transUnit, target) {
+const createDeveloperFile = async (transUnit, target, translator) => {
     for (const i in transUnit) {
         if (transUnit.hasOwnProperty(i)) {
             // Properties with interpolations
@@ -93,7 +100,7 @@ async function createDeveloperFile(transUnit, target) {
                 // If there is no target, add one and translate it; otherwise, clean empty space
                 if (!transUnit[i]['target']) {
                     transUnit[i]['target'] = transUnit[i].source[0];
-                    await translate.translate([transUnit[i].source[0]._], target)
+                    await translate.translate([transUnit[i].source[0]._], target, translator)
                         .then(result => {
                             transUnit[i]['target']._ = trimAndRemoveNewLines(result);
                             // Reset Interpolations
@@ -105,32 +112,33 @@ async function createDeveloperFile(transUnit, target) {
                     // Reset Interpolations
                     transUnit[i] = reinjectInterpolations(transUnit[i]);
                 }
+                return;
                 // Properties with no tags
-            } else {
-                // console.log(`${i} -> ${transUnit[i].source}`);
-                transUnit[i]['source'][0] = trimAndRemoveNewLines(transUnit[i]['source'][0])
-                if (!transUnit[i]['target']) {
-                    await translate.translate(transUnit[i].source, target)
-                        .then(result => {
-                            transUnit[i]['target'] = trimAndRemoveNewLines(result);
-                        });
-                    // console.log(`Created target for: ${transUnit[i].source}`)
-                } else {
-                    transUnit[i]['target'][0] = trimAndRemoveNewLines(transUnit[i]['target'][0])
-                }
             }
+            // console.log(`${i} -> ${transUnit[i].source}`);
+            transUnit[i]['source'][0] = trimAndRemoveNewLines(transUnit[i]['source'][0])
+            if (!transUnit[i]['target']) {
+                await translate.translate(transUnit[i].source, target, translator)
+                    .then(result => {
+                        transUnit[i]['target'] = trimAndRemoveNewLines(result);
+                    });
+                // console.log(`Created target for: ${transUnit[i].source}`)
+            } else {
+                transUnit[i]['target'][0] = trimAndRemoveNewLines(transUnit[i]['target'][0])
+            }
+            return;
         }
     }
 }
 
-async function createTranslatorFile(jsonFileForTranslators) {
+const createTranslatorFile = (jsonFileForTranslators, translator) => {
     // Write out file for translators with targets filled with English on sources without a target
     // Note: translates english to english just for ease of implementation; can be adjusted later.
     const transUnit = jsonFileForTranslators.xliff.file[0].body[0]['trans-unit'];
-    await createDeveloperFile(transUnit, 'en');
+    await createDeveloperFile(transUnit, 'en', translator);
 }
 
-function createBlankTranslatorFile(jsonFileForTranslators) {
+const createBlankTranslatorFile = (jsonFileForTranslators) => {
     // Write out file for translators with empty targets on sources without a target
     const transUnit = jsonFileForTranslators.xliff.file[0].body[0]['trans-unit'];
     for (const i in transUnit) {
@@ -153,7 +161,7 @@ function createBlankTranslatorFile(jsonFileForTranslators) {
     }
 }
 
-function trimAndRemoveNewLines(inputString) {
+const trimAndRemoveNewLines = (inputString) => {
     let temp = [];
     inputString.split('\n').forEach(element => {
         temp.push(element.trim());
@@ -161,13 +169,13 @@ function trimAndRemoveNewLines(inputString) {
     return temp.join(' ');
 }
 
-function reinjectInterpolations(transUnit) {
+const reinjectInterpolations = (transUnit) => {
     transUnit['source'] = replaceInterpolationTag(transUnit['source'])
     transUnit['target'] = replaceInterpolationTag(transUnit['target'])
     return transUnit;
 }
 
-function replaceInterpolationTag(transUnitPartialObject) {
+const replaceInterpolationTag = (transUnitPartialObject) => {
     const equivText = transUnitPartialObject[0]['x'][0]['$']['equiv-text'];
     const interpolation = `<x id="INTERPOLATION" equiv-text="${equivText}"/>`
     transUnitPartialObject[0] = transUnitPartialObject[0]._.replace('~~', interpolation);
@@ -176,6 +184,6 @@ function replaceInterpolationTag(transUnitPartialObject) {
 
 // The replaceInterpolationTag less than and greater than get converted into &lt; and &gt;
 // This is a regex function to replace them all with actual < and >
-function fixInterpolationLessAndGreaterThans(xmlFile) {
+const fixInterpolationLessAndGreaterThans = (xmlFile) => {
     return xmlFile.split('&lt;').join('<').split('&gt;').join('>');
 }

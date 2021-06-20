@@ -1,7 +1,7 @@
 // Imports the Google Cloud client library
-const Translate = require('@google-cloud/translate');
+import Translate from '@google-cloud/translate';
 
-function getClient() {
+const getClient = () => {
     // Your Google Cloud Platform project ID
     const projectId = 'bac76e25e74d770f7bcb42110d91af6d25f37125';
 
@@ -14,10 +14,10 @@ function getClient() {
 }
 
 // Translates some text into the Language of choice
-async function translate(translator, text, target) {
+const translate = async (translateClient, text, target) => {
     let translation;
     return await new Promise(resolve => {
-        translator.translate(text, target)
+        translateClient.translate(text, target)
             .then(results => {
                 translation = results[0][0];
                 // console.log(`Target: ${target}`)
@@ -33,7 +33,7 @@ async function translate(translator, text, target) {
     });
 }
 
-module.exports = {
+export default {
     translate,
     getClient
 }

@@ -7,19 +7,19 @@ let targetMessagesFile;
 // Create parse object
 const parser = new xml2js.Parser();
 
-async function syncTranslateFiles(sourcePath, targetPath) {
+const syncTranslateFiles = async (sourcePath, targetPath) => {
     let targetMessagesFile;
     return await new Promise(resolve => {
         fs.readFile(__dirname + sourcePath, 'utf8', async function (err, sourceData) {
-            await parser.parseString(sourceData, async function (err2, result) {
+            parser.parseString(sourceData, async function (err2, result) {
                 sourceMessagesFile = JSON.parse(JSON.stringify(result));
                 const sourceMessagesFileTransUnit = sourceMessagesFile.xliff.file[0].body[0]['trans-unit'];
                 let targetMessagesFileTransUnit;
                 await fs.readFile(__dirname + targetPath, 'utf8', async function (err3, targetData) {
                     targetData = tagInterpolations(targetData);
-                    await parser.parseString(targetData, async function (err4, result2) {
+                    parser.parseString(targetData, async function (err4, result2) {
                         targetMessagesFile = JSON.parse(JSON.stringify(result2));
-                        targetMessagesFileTransUnit = targetMessagesFile.xliff.file[0].body[0]['trans-unit']
+                        targetMessagesFileTransUnit = targetMessagesFile.xliff.file[0].body[0]['trans-unit'];
 
                         // Loop through each tag id and find tags that are missing in the target file
                         await sourceMessagesFileTransUnit.forEach(sourceElement => {
@@ -49,7 +49,7 @@ async function syncTranslateFiles(sourcePath, targetPath) {
                                 targetMessagesFileTransUnit.splice(index, 1);
                             }
                             idFound = false;
-                        })
+                        });
 
                         // For verifying xml changes
                         // const builder = new xml2js.Builder();
@@ -66,7 +66,7 @@ async function syncTranslateFiles(sourcePath, targetPath) {
     });
 }
 
-function tagInterpolations(sourceData) {
+const tagInterpolations = (sourceData) => {
     return sourceData.split('<x id="INTERPOLATION"').join('~~<x id="INTERPOLATION"');
 }
 
