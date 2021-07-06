@@ -1,4 +1,4 @@
-# Angular 6 i18n Creation and Maintenance Helper
+# Angular i18n Creation and Maintenance Helper
 This is a helper developed with the intent of making Angular 6 i18n a bit less tedious until they come up with their own, better solution(s) (which may or may not already exist, but I couldn't find them and I didn't have time to wait).
 
 ## What this Helper Addresses
