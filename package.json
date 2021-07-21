@@ -19,11 +19,16 @@
   "bugs": {
     "url": "https://github.com/maplion/angular6-i18n-helpers/issues"
   },
+  "bin": {
+    "translator": "./bin/cli.js"
+  },
   "homepage": "https://github.com/maplion/angular6-i18n-helpers#readme",
   "devDependencies": {
-    "@google-cloud/translate": "6.2.2",
+    "@google-cloud/translate": "^6.2.2",
     "aws-sdk": "^2.931.0",
     "file-system": "^2.2.2",
-    "xml2js": "0.4.23"
+    "xliff": "^5.6.0",
+    "xml2js": "^0.4.23",
+    "yargs": "^17.0.1"
   }
 }
