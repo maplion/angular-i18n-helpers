@@ -24,11 +24,12 @@
   },
   "homepage": "https://github.com/maplion/angular6-i18n-helpers#readme",
   "devDependencies": {
+    "@aws-sdk/client-translate": "^3.22.0",
+    "@aws-sdk/credential-provider-ini": "^3.22.0",
     "@google-cloud/translate": "^6.2.2",
-    "aws-sdk": "^2.931.0",
+    "cli-table": "^0.3.6",
     "file-system": "^2.2.2",
-    "xliff": "^5.6.0",
-    "xml2js": "^0.4.23",
+    "xmlbuilder2": "^2.4.1",
     "yargs": "^17.0.1"
   }
 }
