@@ -75,7 +75,7 @@ const syncTranslateFiles = async (sourcePath, targetPath) => {
 }
 
 const tagInterpolations = (sourceData) => {
-    return sourceData.split('<x id="INTERPOLATION"').join('~~<x id="INTERPOLATION"');
+    return sourceData?.split('<x id="INTERPOLATION"').join('~~<x id="INTERPOLATION"');
 }
 
 module.exports = {

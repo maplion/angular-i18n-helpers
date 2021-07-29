@@ -21,7 +21,7 @@ const translateWithGoogle = async (text, target) => {
 const translateWithAws = async (text, target) => {
     let translation;
     return await new Promise(async (resolve) => {
-        await import('./aws-translate.js')
+        await import('../bin/aws-translate.js')
             .then(awsTranslate => {
                 const client = awsTranslate.getClient();
                 awsTranslate.translate(client, text, target)
