@@ -1,28 +1,35 @@
 {
-  "name": "angular6-i18n-helpers",
-  "version": "0.1.0",
-  "description": "This is a helper developed with the intent of making Angular 6 i18n a bit less tedious",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maplion/angular6-i18n-helpers.git"
-  },
-  "keywords": [
-    "angular6",
-    "i18n"
-  ],
-  "author": "Ryan Dammrose",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maplion/angular6-i18n-helpers/issues"
-  },
-  "homepage": "https://github.com/maplion/angular6-i18n-helpers#readme",
-  "devDependencies": {
-    "@google-cloud/translate": "1.1.0",
-    "file-system": "^2.2.2",
-    "xml2js": "0.4.19"
-  }
+    "name": "angular-i18n-helpers",
+    "version": "0.2.0",
+    "description": "This is a helper developed with the intent of making Angular i18n a bit less tedious",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maplion/angular6-i18n-helpers.git"
+    },
+    "keywords": [
+        "angular",
+        "i18n"
+    ],
+    "author": "Ryan Dammrose",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/maplion/angular-i18n-helpers/issues"
+    },
+    "bin": {
+        "translator": "./bin/cli.js"
+    },
+    "homepage": "https://github.com/maplion/angular-i18n-helpers#readme",
+    "devDependencies": {
+        "@aws-sdk/client-translate": "^3.22.0",
+        "@aws-sdk/credential-provider-ini": "^3.22.0",
+        "@google-cloud/translate": "^6.2.2",
+        "cli-table": "^0.3.6",
+        "file-system": "^2.2.2",
+        "xmlbuilder2": "^2.4.1",
+        "yargs": "^17.0.1"
+    }
 }
