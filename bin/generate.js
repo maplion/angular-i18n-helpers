@@ -1,168 +1,186 @@
 'use strict;'
 
-const xliffParser= require('./xliff-parser');
-const common= require('./common');
-const constants=require('./constants')
-const CustomTable=require('./table')
-const {getClient,translate}=require('../helpers/aws-translate')
+const xliffParser = require('./xliff-parser');
+const common = require('./common');
+const constants = require('./constants')
+const CustomTable = require('./table')
+const {
+    getClient,
+    translate
+} = require('../helpers/aws-translate')
 
-function Generate(language,awsProfile,region,autoTranslate,inputSrcFile){
-    this.customTable=new CustomTable(["Action", "Message"],[50,50])
-    this.language=language;
-    this.awsProfile=awsProfile;
-    this.region=region;
-    this.displayTableData=[];
-    this.autoTranslate=autoTranslate;
-    this.targetLanguage=region?`${language}-${region}`:language;
-    this.inputSrcFile=inputSrcFile|| constants.ROOT_TRANSLATION_FILEPATH;
-    this.srcJsonData=null;
-    this.translationOutDir=constants.TRANSLATED_FILE_DIR;
-    let filename=`${constants.TRANSLATION_FILE_NAME_PREFIX}.${language}`;
-    if(region){
-        filename+=`-${region}`;
+function Generate(language, awsProfile, region, autoTranslate, inputSrcFile) {
+    this.customTable = new CustomTable(["Action", "Message"], [50, 50])
+    this.language = language;
+    this.awsProfile = awsProfile;
+    this.region = region;
+    this.displayTableData = [];
+    this.autoTranslate = autoTranslate;
+    this.targetLanguage = region ? `${language}-${region}` : language;
+    this.inputSrcFile = inputSrcFile || constants.ROOT_TRANSLATION_FILEPATH;
+    this.srcJsonData = null;
+    this.translationOutDir = constants.TRANSLATED_FILE_DIR;
+    let filename = `${constants.TRANSLATION_FILE_NAME_PREFIX}.${language}`;
+    if (region) {
+        filename += `-${region}`;
     }
-    filename+=`.${constants.TRANSLATION_FILE_NAME_EXT}`;
-    this.translationFilePath=`${this.translationOutDir}/${filename}`;
-    this.officialFilePath=`official/${filename}`;
-    this.developmentFilePath=`development/${filename}`;
+    filename += `.${constants.TRANSLATION_FILE_NAME_EXT}`;
+    this.translationFilePath = `${this.translationOutDir}/${filename}`;
+    this.officialFilePath = `official/${filename}`;
+    this.developmentFilePath = `development/${filename}`;
     // console.log(this.customTable)
-    this.customTable.pushToTable({"Ready for dev file ":[this.developmentFilePath]})
-    this.customTable.pushToTable({"File for translation ":[this.translationFilePath]})
+    this.customTable.pushToTable({
+        "Ready for dev file ": [this.developmentFilePath]
+    })
+    this.customTable.pushToTable({
+        "File for translation ": [this.translationFilePath]
+    })
 }
-async function checkOfficialExist(){
+async function checkOfficialExist() {
     return common.chkFileExist(this.officialFilePath)
 }
-async function updateLanguageFile(){
+async function updateLanguageFile() {
     // console.log("updateLanguageFile-->",this);
-    let officialJsonData=await parseXlifSrc(this.officialFilePath);
-    let officialTransUnits=officialJsonData["xliff"]["file"]["body"]["trans-unit"];
-    let srcTransUnit=this.srcJsonData["xliff"]["file"]["body"]["trans-unit"];
+    let officialJsonData = await parseXlifSrc(this.officialFilePath);
+    let officialTransUnits = officialJsonData["xliff"]["file"]["body"]["trans-unit"];
+    let srcTransUnit = this.srcJsonData["xliff"]["file"]["body"]["trans-unit"];
     // console.log("srcTransUnit count-->",srcTransUnit.length)
     // console.log("officialTransUnits count-->",officialTransUnits.length)
-    officialTransUnits=findNewlyAddedKeys.call(this,srcTransUnit,officialTransUnits);
-    officialTransUnits=removeOrphanKeys.call(this,srcTransUnit,officialTransUnits);
-    officialJsonData["xliff"]["file"]["body"]["trans-unit"]=officialTransUnits;
-    const xliffData=xliffParser.createXliff(officialJsonData);
-    await common.fileWriter(this.translationFilePath,xliffData)
-    
+    officialTransUnits = findNewlyAddedKeys.call(this, srcTransUnit, officialTransUnits);
+    officialTransUnits = removeOrphanKeys.call(this, srcTransUnit, officialTransUnits);
+    officialJsonData["xliff"]["file"]["body"]["trans-unit"] = officialTransUnits;
+    const xliffData = xliffParser.createXliff(officialJsonData);
+    await common.fileWriter(this.translationFilePath, xliffData)
+
 }
-function findNewlyAddedKeys(srcTransUnit,officialTransUnits){
-    let newKeys=[]
-    let newKeyTable=new CustomTable(["S.No.","@id","Source","Traget"],[10,40,50,50])
+
+function findNewlyAddedKeys(srcTransUnit, officialTransUnits) {
+    let newKeys = []
+    let newKeyTable = new CustomTable(["S.No.", "@id", "Source", "Traget"], [10, 40, 50, 50])
     // console.log(srcTransUnit[0])
     srcTransUnit.forEach((trans) => {
-        let indexInOfficial=officialTransUnits.findIndex(officialTrans=>officialTrans["@id"]===trans["@id"]);
-        if(indexInOfficial===-1){
+        let indexInOfficial = officialTransUnits.findIndex(officialTrans => officialTrans["@id"] === trans["@id"]);
+        if (indexInOfficial === -1) {
             newKeys.push(trans)
-            let row={};
-            let target=trans["target"]
-            if(Object.keys(trans["target"]).length === 0 && 
-            trans["target"].constructor === Object){
-                target="N/A";
+            let row = {};
+            let target = trans["target"]
+            if (Object.keys(trans["target"]).length === 0 &&
+                trans["target"].constructor === Object) {
+                target = "N/A";
             }
-            row[`${newKeys.length}`]=[trans["@id"],trans["source"],target]
+            row[`${newKeys.length}`] = [trans["@id"], trans["source"], target]
             newKeyTable.pushToTable(row)
         }
     });
     newKeyTable.show("Newly Added Keys");
-    this.customTable.pushToTable({"Number of removed Keys":[newKeys.length]})
+    this.customTable.pushToTable({
+        "Number of removed Keys": [newKeys.length]
+    })
     // console.log("newly added keys count-->",newKeys.length)
     // console.log("newly added keys-->",JSON.stringify(newKeys))
-    officialTransUnits=officialTransUnits.concat(newKeys)
+    officialTransUnits = officialTransUnits.concat(newKeys)
     return officialTransUnits
 }
 
-function removeOrphanKeys(srcTransUnit,officialTransUnits){
-    let existingKeys=[];
-    let removedKeys=[];
-    let removedKeysTable=new CustomTable(["S.No.","@id","Source","Traget"],[10,40,50,50])
+function removeOrphanKeys(srcTransUnit, officialTransUnits) {
+    let existingKeys = [];
+    let removedKeys = [];
+    let removedKeysTable = new CustomTable(["S.No.", "@id", "Source", "Traget"], [10, 40, 50, 50])
     officialTransUnits.forEach(trans => {
-        let indexInOfficial=srcTransUnit.findIndex(srcTrans=>srcTrans["@id"]===trans["@id"]);
-        if(indexInOfficial>-1){
+        let indexInOfficial = srcTransUnit.findIndex(srcTrans => srcTrans["@id"] === trans["@id"]);
+        if (indexInOfficial > -1) {
             existingKeys.push(trans)
-        }else{
+        } else {
             removedKeys.push(trans)
-            let row={};
-            row[`${removedKeys.length}`]=[trans["@id"],trans["source"],trans["target"]]
+            let row = {};
+            row[`${removedKeys.length}`] = [trans["@id"], trans["source"], trans["target"]]
             removedKeysTable.pushToTable(row)
         }
     });
     removedKeysTable.show("Removed Keys");
-    this.customTable.pushToTable({"Number of removed Keys":[removedKeys.length]})
+    this.customTable.pushToTable({
+        "Number of removed Keys": [removedKeys.length]
+    })
     // console.log("removed keys count-->",removedKeys.length)
     // console.log("removed keys-->",removedKeys)
     // // console.log("removed keys-->",newKeys)
     return existingKeys;
 }
 
-async function parseXlifSrc(inputSrcFile){
-    const xml=await common.fileReader(inputSrcFile)
+async function parseXlifSrc(inputSrcFile) {
+    const xml = await common.fileReader(inputSrcFile)
     return xliffParser.xliff2Json(xml)
 }
-async function newLanguageFile(){
-    try{
-        let targetJsonData=JSON.parse(JSON.stringify(this.srcJsonData));
-        targetJsonData["xliff"]["file"]["@target-language"]=this.targetLanguage
-        
-        const xliffData=xliffParser.createXliff(targetJsonData);
-        await common.fileWriter(this.translationFilePath,xliffData)
+async function newLanguageFile() {
+    try {
+        let targetJsonData = JSON.parse(JSON.stringify(this.srcJsonData));
+        targetJsonData["xliff"]["file"]["@target-language"] = this.targetLanguage
+
+        const xliffData = xliffParser.createXliff(targetJsonData);
+        await common.fileWriter(this.translationFilePath, xliffData)
         // target-language='fr'
         // // console.log("xml-->",xml)
-        
+
         // // console.log("jsonData-->",jsonData);
-    }catch(err){
+    } catch (err) {
         throw err;
     }
 }
 
-async function autoTranslate(translationReadyJson){
-    const client=getClient(this.awsProfile);
-    let translatedUnits=translationReadyJson["xliff"]["file"]["body"]["trans-unit"];
-    let autoTranslateCount=0;
-    translatedUnits=await Promise.all(translatedUnits.map(async transUnit=>{
-        if (transUnit.target && 
-            Object.keys(transUnit.target).length === 0 && 
-            transUnit.target.constructor === Object){
-                autoTranslateCount++;
-                // console.log("transUnit.target-->",JSON.stringify(transUnit))
-                transUnit.target=(await translate(client,transUnit.source,this.language))['TranslatedText']
+async function autoTranslate(translationReadyJson) {
+    const client = getClient(this.awsProfile);
+    let translatedUnits = translationReadyJson["xliff"]["file"]["body"]["trans-unit"];
+    let autoTranslateCount = 0;
+    translatedUnits = await Promise.all(translatedUnits.map(async transUnit => {
+        if (transUnit.target &&
+            Object.keys(transUnit.target).length === 0 &&
+            transUnit.target.constructor === Object) {
+            autoTranslateCount++;
+            // console.log("transUnit.target-->",JSON.stringify(transUnit))
+            transUnit.target = (await translate(client, transUnit.source, this.language))['TranslatedText']
             return transUnit;
-        }else{
+        } else {
             return transUnit;
         }
     }));
-    this.customTable.pushToTable({"Number of Auto translated Keys":[autoTranslateCount]})
-    translationReadyJson["xliff"]["file"]["body"]["trans-unit"]=translatedUnits
+    this.customTable.pushToTable({
+        "Number of Auto translated Keys": [autoTranslateCount]
+    })
+    translationReadyJson["xliff"]["file"]["body"]["trans-unit"] = translatedUnits
     return translationReadyJson;
     // const key in translationReadyJson["xliff"]["file"]["trans-unit"]
 }
 
-Generate.prototype.start=async function(){
-    try{
-        this.srcJsonData=await parseXlifSrc(this.inputSrcFile)
-        const officialExist=await checkOfficialExist.call(this);
+Generate.prototype.start = async function () {
+    try {
+        this.srcJsonData = await parseXlifSrc(this.inputSrcFile)
+        const officialExist = await checkOfficialExist.call(this);
         // console.log("officialExist-->",officialExist)
-        this.customTable.pushToTable({"Is Offical translation exist ?":[officialExist?"Yes":"No"]})
-        if(officialExist){
-            this.customTable.pushToTable({"Official source path ":[this.officialFilePath]})
+        this.customTable.pushToTable({
+            "Is Offical translation exist ?": [officialExist ? "Yes" : "No"]
+        })
+        if (officialExist) {
+            this.customTable.pushToTable({
+                "Official source path ": [this.officialFilePath]
+            })
             await updateLanguageFile.call(this);
-        }else{
+        } else {
             await newLanguageFile.call(this);
         }
-        let translationReadyJson=await parseXlifSrc(this.translationFilePath);
+        let translationReadyJson = await parseXlifSrc(this.translationFilePath);
         // // console.log("autoTranslate-->",translationReadyJson)
-        if(this.autoTranslate==="on"){
+        if (this.autoTranslate === "on") {
             // console.log("enter in if--->");
-            translationReadyJson=await autoTranslate.call(this,translationReadyJson);
+            translationReadyJson = await autoTranslate.call(this, translationReadyJson);
         }
-        const xliffData=xliffParser.createXliff(translationReadyJson);
-        await common.fileWriter(this.developmentFilePath,xliffData)
+        const xliffData = xliffParser.createXliff(translationReadyJson);
+        await common.fileWriter(this.developmentFilePath, xliffData)
         this.customTable.show("Over all status of task")
         // // console.log("this.srcJsonData--->",this.srcJsonData)
-    }catch(err){
+    } catch (err) {
         throw err;
     }
-    
+
 }
 
-module.exports= Generate;
+module.exports = Generate;
