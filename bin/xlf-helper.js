@@ -5,7 +5,7 @@
 const fs = require('file-system');
 const xml2js = require('xml2js');
 const translate = require('./translate-helper');
-const xlfDiff = require('./xlf-diff');
+// const xlfDiff = require('./xlf-diff');
 
 const defaultTarget = 'fr';
 const defaultTranslator = 'aws';
@@ -45,55 +45,55 @@ const printArguments = () => {
     console.log('translator: ', translator);
 }
 
-const syncFiles = async () => {
-    printArguments();
-    return await xlfDiff.syncTranslateFiles(defaultDeveloperXlfFilePath +
-        defaultMessagesXlfFile, defaultDeveloperXlfFilePath + xlfFile);
-}
+// const syncFiles = async () => {
+//     printArguments();
+//     return await xlfDiff.syncTranslateFiles(defaultDeveloperXlfFilePath +
+//         defaultMessagesXlfFile, defaultDeveloperXlfFilePath + xlfFile);
+// }
 
-syncFiles()
-    .then(jsonObject => {
-        // console.log(jsonObject);
-        const jsonFileForTranslators = JSON.parse(JSON.stringify(jsonObject));
-        const jsonFileForDevelopment = JSON.parse(JSON.stringify(jsonObject));
+// syncFiles()
+//     .then(jsonObject => {
+//         // console.log(jsonObject);
+//         const jsonFileForTranslators = JSON.parse(JSON.stringify(jsonObject));
+//         const jsonFileForDevelopment = JSON.parse(JSON.stringify(jsonObject));
 
-        // Write out intermediate json file
-        // fs.writeFile(__dirname + '/../locale/test.json', jsonString, (err) => {
-        //     if (err) {
-        //         return console.log(err);
-        //     }
+//         // Write out intermediate json file
+//         // fs.writeFile(__dirname + '/../locale/test.json', jsonString, (err) => {
+//         //     if (err) {
+//         //         return console.log(err);
+//         //     }
 
-        //     console.log('The file was saved!');
-        //     console.log('Done');
-        // });
+//         //     console.log('The file was saved!');
+//         //     console.log('Done');
+//         // });
 
-        // Create Translator File
-        createTranslatorFile(jsonFileForTranslators, translator)
-            .then(() => {
-                // Write out file for development with Google-translated targets on sources without a target
-                const transUnit = jsonFileForDevelopment.xliff.file[0].body[0]['trans-unit'];
-                createDeveloperFile(transUnit, target, translator)
-                    .then(() => {
-                        // Create builder instance
-                        const builder = new xml2js.Builder();
-                        // Write file for translators with empty targets
-                        let xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
-                        xmlFileForTranslators = fixInterpolationLessAndGreaterThans(xmlFileForTranslators);
-                        writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
+//         // Create Translator File
+//         createTranslatorFile(jsonFileForTranslators, translator)
+//             .then(() => {
+//                 // Write out file for development with Google-translated targets on sources without a target
+//                 const transUnit = jsonFileForDevelopment.xliff.file[0].body[0]['trans-unit'];
+//                 createDeveloperFile(transUnit, target, translator)
+//                     .then(() => {
+//                         // Create builder instance
+//                         const builder = new xml2js.Builder();
+//                         // Write file for translators with empty targets
+//                         let xmlFileForTranslators = builder.buildObject(jsonFileForTranslators);
+//                         xmlFileForTranslators = fixInterpolationLessAndGreaterThans(xmlFileForTranslators);
+//                         writeTranslationFile(defaultTranslatorXlfFilePath, xmlFileForTranslators, target);
 
-                        // Write file for development with Google-Translated elements
-                        let xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
-                        xmlFileForDevelopment = fixInterpolationLessAndGreaterThans(xmlFileForDevelopment);
-                        writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
-                    }).catch(error => {
-                        console.log('ERROR: ', error.message, error);
-                    });
-            }).catch(error => {
-                console.log('ERROR: ', error.message, error);
-            });
-    }).catch(error => {
-        console.log('ERROR: ', error.message, error);
-    });
+//                         // Write file for development with Google-Translated elements
+//                         let xmlFileForDevelopment = builder.buildObject(jsonFileForDevelopment);
+//                         xmlFileForDevelopment = fixInterpolationLessAndGreaterThans(xmlFileForDevelopment);
+//                         writeTranslationFile(defaultDeveloperXlfFilePath, xmlFileForDevelopment, target);
+//                     }).catch(error => {
+//                         console.log('ERROR: ', error.message, error);
+//                     });
+//             }).catch(error => {
+//                 console.log('ERROR: ', error.message, error);
+//             });
+//     }).catch(error => {
+//         console.log('ERROR: ', error.message, error);
+//     });
 
 const writeTranslationFile = async (relativePath, xml, target) => {
     // Only write a new locale file if not updating an existing
@@ -187,9 +187,22 @@ const createBlankTranslatorFile = (jsonFileForTranslators) => {
     }
 }
 
+const addBlankTargets = (jsonFile) => {
+    // Write out file for translators with empty targets on sources without a target
+    const transUnit = jsonFile.xliff.file.body['trans-unit'];
+    for (const i in transUnit) {
+        // console.log(`${i} -> ${transUnit[i].source}`);
+        if (!transUnit[i]['target']) {
+            transUnit[i]['target'] = '';
+            // console.log(`Created target for: ${transUnit[i].source}`)
+        }
+    }
+}
+
+
 const trimAndRemoveNewLines = (inputString) => {
     let temp = [];
-    if (inputString === typeof string) {
+    if (typeof (inputString) === 'string') {
         inputString.split('\n').forEach(element => {
             temp.push(element.trim());
         });
@@ -214,4 +227,9 @@ const replaceInterpolationTag = (transUnitPartialObject) => {
 // This is a regex function to replace them all with actual < and >
 const fixInterpolationLessAndGreaterThans = (xmlFile) => {
     return xmlFile.split('&lt;').join('<').split('&gt;').join('>');
+}
+
+module.exports = {
+    trimAndRemoveNewLines,
+    addBlankTargets
 }

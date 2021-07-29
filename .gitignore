@@ -1,3 +1,5 @@
 node_modules/
 helpers/my-google-translate.js
 helpers/my-google-translate-credentials.json
+
+.DS_Store

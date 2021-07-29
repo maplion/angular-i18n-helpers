@@ -1,0 +1,2241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="fr">
+    <body>
+      <trans-unit id="confirmationDialog-confirmButton" datatype="html">
+        <source>Confirm</source>
+        <target>Confirmer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="confirmationDialog-cancelButton" datatype="html">
+        <source>Cancel</source>
+        <target>Annuler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkeyMenu-typeInDomain" datatype="html">
+        <source>Type in a domain</source>
+        <target>Saisissez un domaine</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkeyMenu-noRecordFound" datatype="html">
+        <source>No Record Found.</source>
+        <target>Aucun enregistrement n'a été trouvé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-check_circle" datatype="html">
+        <source>check_circle</source>
+        <target>check_circle</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkeyMenu-storeDetailSidelabel" datatype="html">
+        <source>Store</source>
+        <target>Magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkeyMenu-city" datatype="html">
+        <source>City</source>
+        <target>Ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkeyMenu-region" datatype="html">
+        <source>Region</source>
+        <target>Région</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkeyMenu-district" datatype="html">
+        <source>District</source>
+        <target>District</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkeyMenu-address" datatype="html">
+        <source>Address</source>
+        <target>Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="countkey-nextButton" datatype="html">
+        <source>Next</source>
+        <target>Suivant</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/countkey-menu/countkey-menu.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-termsOfUse" datatype="html">
+        <source>Terms of Use</source>
+        <target>Conditions d'utilisation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/footer/footer.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-privacyPolicy" datatype="html">
+        <source>Privacy Policy</source>
+        <target>Politique de confidentialité</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/footer/footer.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer-copyrightContent" datatype="html">
+        <source>© 2021 OmniCounts, Inc. All rights reserved.</source>
+        <target>© 2021 OmniCounts, Inc. Tous droits réservés.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/footer/footer.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-more_vert" datatype="html">
+        <source>more_vert</source>
+        <target>more_vert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header-configurationButton" datatype="html">
+        <source>Configuration</source>
+        <target>Configuration</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header-configurationButtonComplete" datatype="html">
+        <source>Configuration</source>
+        <target>Configuration</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header-finalizedInventoryButton" datatype="html">
+        <source>Finalized Inventory</source>
+        <target>Inventaire finalisé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header-reportsButton" datatype="html">
+        <source>Reports</source>
+        <target>Rapports</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header-logoutButton" datatype="html">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="header-phoneNumber" datatype="html">
+        <source>Questions? (833) COUNT-IT</source>
+        <target>Des questions ? (833) COMPTE-IT</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-clear" datatype="html">
+        <source>clear</source>
+        <target>clair</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navigation-configurationMenuItem" datatype="html">
+        <source>Configuration</source>
+        <target>Configuration</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navigation-finalizedInventoryMenuItem" datatype="html">
+        <source>Finalized Inventory</source>
+        <target>Inventaire finalisé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navigation-dashboardMenuItem" datatype="html">
+        <source>Dashboard</source>
+        <target>Tableau de bord</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navigation-logOutMenuItem" datatype="html">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/navigation/navigation.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-search" datatype="html">
+        <source>Search...</source>
+        <target>Rechercher...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/messages/core.messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-recordsAreUpdated" datatype="html">
+        <source>Records are updated.</source>
+        <target>Les enregistrements sont mis à jour.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/messages/core.messages.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-calendar_today" datatype="html">
+        <source>calendar_today</source>
+        <target>calendar_today</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-inventoryDetailsTitle" datatype="html">
+        <source>Inventory Details</source>
+        <target>Détails de l'inventaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-areaTagsId" datatype="html">
+        <source>Area Tags ID</source>
+        <target>ID des balises de zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-qrCode" datatype="html">
+        <source>qr_code</source>
+        <target>code qr_</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-startTime" datatype="html">
+        <source>Start Time</source>
+        <target>Heure de début</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-status" datatype="html">
+        <source>Status</source>
+        <target>Statut</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-inventoryWillStartIn" datatype="html">
+        <source>Inventory will start in</source>
+        <target>L'inventaire débutera dans</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-dashboard-dateFormat" datatype="html">
+        <source>$!d!</source>
+        <target>$ ! D !</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-days" datatype="html">
+        <source>days</source>
+        <target>jours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-dashboard-hourFormat" datatype="html">
+        <source>: $!h!</source>
+        <target>: $ ! Oh !</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-hours" datatype="html">
+        <source>hours</source>
+        <target>heures</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-dashboard-minuteFormat" datatype="html">
+        <source>: $!m!</source>
+        <target>: $ ! M !</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-min" datatype="html">
+        <source>min</source>
+        <target>minimum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-dashboard-secondFormat" datatype="html">
+        <source>: $!s!</source>
+        <target>: $ ! S !</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-sec" datatype="html">
+        <source>sec</source>
+        <target>seconde</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-startInventory" datatype="html">
+        <source>Start Inventory</source>
+        <target>Démarrer l'inventaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-closeInventory-button" datatype="html">
+        <source>Close Inventory</source>
+        <target>Fermer l'inventaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-softClose-button" datatype="html">
+        <source>Soft Close</source>
+        <target>Fermeture douce</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-goToStoreSetup" datatype="html">
+        <source>Go to store setup</source>
+        <target>Aller à la configuration du magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-launch" datatype="html">
+        <source>launch</source>
+        <target>lancer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-latestOutputFiles-button" datatype="html">
+        <source>Latest Output Files</source>
+        <target>Fichiers de sortie les plus récents</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-multiQuantityQrCodeLink" datatype="html">
+        <source>Multi-Quantity QR Code</source>
+        <target>Code QR multi-quantités</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-configurationStatusTitle" datatype="html">
+        <source>Configuration Status</source>
+        <target>État de la configuration</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">103,104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-refresh" datatype="html">
+        <source>refresh</source>
+        <target>actualiser</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/overall-completion-report/overall-completion-report.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-edit" datatype="html">
+        <source>edit</source>
+        <target>modifier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-departmentNotSetupYetToStartInventory" datatype="html">
+        <source>Department details for this store must be set up prior to starting inventory.</source>
+        <target>Les détails du département de ce magasin doivent être configurés avant de commencer le stock.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">128,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-goToStoreSetupButton" datatype="html">
+        <source>Go to Store Setup</source>
+        <target>Aller à la configuration du magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">141,142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-nameColumnHeader" datatype="html">
+        <source>Name</source>
+        <target>Nom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-itemDescriptionColumnHeader" datatype="html">
+        <source>Item Description</source>
+        <target>Description de l'article</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">153,155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-rangeColumnHeader" datatype="html">
+        <source>Range</source>
+        <target>Gamme</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">162,163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-viewAreaTagColumnHeader" datatype="html">
+        <source>View Area Tag</source>
+        <target>Étiquette de zone d'affichage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">169,170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-visibility" datatype="html">
+        <source>visibility</source>
+        <target>visibilité</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">175,176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dashboard-statusColumnHeader" datatype="html">
+        <source>Status</source>
+        <target>Statut</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">182,183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-remove" datatype="html">
+        <source>remove</source>
+        <target>supprimer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-search" datatype="html">
+        <source>search</source>
+        <target>chercher</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="departmentDetail-labelFrom" datatype="html">
+        <source>From</source>
+        <target>À partir de</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="departmentDetail-labelTo" datatype="html">
+        <source>To</source>
+        <target>À</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="departmentDetail-areaTagsColumnHeader" datatype="html">
+        <source>Area Tags</source>
+        <target>Étiquettes de zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="departmentDetail-statusColumnHeader" datatype="html">
+        <source>Status</source>
+        <target>Statut</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="departmentDetail-statusNotStartedYet" datatype="html">
+        <source>Not started yet</source>
+        <target>Pas encore commencé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="departmentDetail-statusTagHasBeenStarted" datatype="html">
+        <source>Tag has been started</source>
+        <target>Le tag a été lancé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="departmentDetail-statusTagHasBeenCompleted" datatype="html">
+        <source>Tag has been completed</source>
+        <target>La balise a été terminée</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/department-detail/department-detail.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fileListPopup-latestOutputFilesTitle" datatype="html">
+        <source>Latest Output Files</source>
+        <target>Fichiers de sortie les plus récents</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/file-list-popup/file-list-popup.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fileListPopup-nameColumnHeader" datatype="html">
+        <source>Name      </source>
+        <target>Nom </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/file-list-popup/file-list-popup.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fileListPopup-updatedColumnHeader" datatype="html">
+        <source>Updated      </source>
+        <target>Mise à jour </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/file-list-popup/file-list-popup.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fileListPopup-linkColumnHeader" datatype="html">
+        <source>Link</source>
+        <target>Lien</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/file-list-popup/file-list-popup.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fileListPopup-openLink" datatype="html">
+        <source>Open</source>
+        <target>Ouvert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/file-list-popup/file-list-popup.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeStatus-reports" datatype="html">
+        <source>Reports</source>
+        <target>Rapports</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/components/store-status/store-status.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-failedToInitiate" datatype="html">
+        <source>Failed to initiate one
+     or more background batch worker processes</source>
+        <target>Impossible d'en initier un
+ ou plus de processus de traitement par lots en arrière-plan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-noRecentOutputFilesFound" datatype="html">
+        <source>No recent output files found.</source>
+        <target>Aucun fichier de sortie récent n'a été trouvé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-checkBackLater" datatype="html">
+        <source>Check Back Later</source>
+        <target>Revenez plus tard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-requestForNewOutputFileWasSubmitted" datatype="html">
+        <source>A request
+     for new output file was submitted.</source>
+        <target>Une demande
+ pour le nouveau fichier de sortie a été soumis.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-noAdditionalInformationIsAvailable" datatype="html">
+        <source>No additional
+     information is available.</source>
+        <target>Pas de supplément
+ des informations sont disponibles.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-failedToStartOneOrMoreBatchServicesAssociated" datatype="html">
+        <source>Failed
+      to start one or more batch services associated with count.</source>
+        <target>Échec
+ pour démarrer un ou plusieurs services par lots associés au compte.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-submittingSoftCloseRequestErrorTitle" datatype="html">
+        <source>Error</source>
+        <target>Erreur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-submittingSoftCloseError" datatype="html">
+        <source>Something went wrong while submitting your
+     soft close request. Please reach out to technical support.</source>
+        <target>Quelque chose s'est mal passé en soumettant votre
+ demande de fermeture en douceur. Veuillez contacter le support technique.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-submittingSoftCloseRequestSuccessTitle" datatype="html">
+        <source>Success</source>
+        <target>Succès</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-submittingSoft" datatype="html">
+        <source>Your soft close request was submitted. Note it can take
+     several minutes before your output files are updated.</source>
+        <target>Votre demande de fermeture en douceur a été envoyée. Notez que cela peut prendre
+ quelques minutes avant la mise à jour de vos fichiers de sortie.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-closeInventoryAuditRemainingTitle" datatype="html">
+        <source>Close Inventory</source>
+        <target>Fermer l'inventaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-closeInventoryIfNotPendingTitle" datatype="html">
+        <source>Close Inventory</source>
+        <target>Fermer l'inventaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-closeInventoryConfirmationTitle" datatype="html">
+        <source>Close Inventory
+     Confirmation</source>
+        <target>Fermer l'inventaire
+ Confirmation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-closeInventoryConfirmation" datatype="html">
+        <source>Are you sure you
+     want to close the inventory?</source>
+        <target>Êtes-vous sûr de
+ Vous souhaitez fermer l'inventaire ?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="configuration-messages-departmentDetailSearch" datatype="html">
+        <source>Search here</source>
+        <target>Recherchez ici</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/configuration/messages/configuration.messages.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-instanceId" datatype="html">
+        <source>Instance</source>
+        <target>Instance</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Instance # [instance Id]</note>
+        <note priority="1" from="meaning">Finalize Inventory Instance Id</note>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-finalizeInventoryTitle" datatype="html">
+        <source>Finalize Inventory</source>
+        <target>Finaliser l'inventaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-wasCompleteDoNotForget" datatype="html">
+        <source>Enter your name and date of when the Inventory was complete. Do not forget to leave a note.</source>
+        <target>Entrez votre nom et la date à laquelle l'inventaire a été terminé. N'oubliez pas de laisser une note.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-date" datatype="html">
+        <source>Date</source>
+        <target>Date</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-keyboard_arrow_down" datatype="html">
+        <source>keyboard_arrow_down</source>
+        <target>keyboard_arrow_down</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-name" datatype="html">
+        <source>Name</source>
+        <target>Nom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-three" datatype="html">
+        <source>3</source>
+        <target>3</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-note" datatype="html">
+        <source>Note</source>
+        <target>Remarque</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalizeInventory-finalizeInventoryButton" datatype="html">
+        <source>Finalize Inventory</source>
+        <target>Finaliser l'inventaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/finalize-inventory/finalize-inventory.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inventoryComplete-instanceId" datatype="html">
+        <source>Instance</source>
+        <target>Instance</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/inventory-complete/inventory-complete.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Instance # [instance Id]</note>
+        <note priority="1" from="meaning">Complete Inventory Instance Id</note>
+      </trans-unit>
+      <trans-unit id="inventoryComplete-inventoryHasBeenCompleted" datatype="html">
+        <source>Inventory has been completed
+</source>
+        <target>L'inventaire est terminé
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/inventory-close/components/inventory-complete/inventory-complete.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="allStoresStatus-storeColumnHeader" datatype="html">
+        <source>STORE#</source>
+        <target># DE MAGASIN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/all-stores-status/all-stores-status.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="allStoresStatus-storeDescriptionColumnHeader" datatype="html">
+        <source>STORE DESC</source>
+        <target>DESC DE MAGASIN</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/all-stores-status/all-stores-status.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">abbreviation for store description</note>
+        <note priority="1" from="meaning">store description column header</note>
+      </trans-unit>
+      <trans-unit id="allStoresStatus-numberOfFixturesColumnHeader" datatype="html">
+        <source>Number of Fixtures</source>
+        <target>Nombre de luminaires</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/all-stores-status/all-stores-status.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="allStoresStatus-percentageCompletedColumnHeader" datatype="html">
+        <source>Percentage Completed</source>
+        <target>Pourcentage achevé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/all-stores-status/all-stores-status.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="allStoresStatus-startTimeColumnHeader" datatype="html">
+        <source>Start Time</source>
+        <target>Heure de début</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/all-stores-status/all-stores-status.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="allStoresStatus-stopTimeColumnHeader" datatype="html">
+        <source>Stop Time</source>
+        <target>Heure d'arrêt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/all-stores-status/all-stores-status.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-departmentDetailsTitle" datatype="html">
+        <source>Department Details</source>
+        <target>Détails du département</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-label-one" datatype="html">
+        <source>One</source>
+        <target>Un</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-noRecordFound" datatype="html">
+        <source>No Record Found.</source>
+        <target>Aucun enregistrement n'a été trouvé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-notStarted" datatype="html">
+        <source>Not Started</source>
+        <target>Non démarré</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-inProgress" datatype="html">
+        <source>In Progress</source>
+        <target>En cours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-audited" datatype="html">
+        <source>Audited</source>
+        <target>Audité</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-completed" datatype="html">
+        <source>Completed</source>
+        <target>Terminé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-label-two" datatype="html">
+        <source>Two</source>
+        <target>Deux</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-fixtureNoRecordFound" datatype="html">
+        <source>No Record Found.</source>
+        <target>Aucun enregistrement n'a été trouvé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-fixtureDescriptionColumnHeader" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-fixtureTotalCompletedColumnHeader" datatype="html">
+        <source>Completed</source>
+        <target>Terminé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-fixtureAuditsColumnHeader" datatype="html">
+        <source>Audits</source>
+        <target>Audits</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-fixtureTotalInProgressColumnHeader" datatype="html">
+        <source>In Progress</source>
+        <target>En cours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-fixtureNotStartedColumnHeader" datatype="html">
+        <source>Not Started</source>
+        <target>Non démarré</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-departmentsCompletionLabel" datatype="html">
+        <source>Department(s) Completion</source>
+        <target>Achèvement du ministère (s)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-department-contentSeparator" datatype="html">
+        <source>:</source>
+        <target>:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="department-departmentsAuditActualLabel" datatype="html">
+        <source>Department(s) Audit Actual</source>
+        <target>Ministère (s) Audit réel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/department/department.component.html</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filterColumns-selectColumnsInReports" datatype="html">
+        <source>Select Columns in reports</source>
+        <target>Sélectionner des colonnes dans les rapports</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter-columns/filter-columns.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filterColumns-okayButton" datatype="html">
+        <source>Okay</source>
+        <target>OK.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter-columns/filter-columns.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-filterList" datatype="html">
+        <source>filter_list</source>
+        <target>filter_list</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter/filter.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter-filterTitle" datatype="html">
+        <source>Filter</source>
+        <target>Filtre</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter/filter.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter-advanceFilterLabel" datatype="html">
+        <source>Advance Filter</source>
+        <target>Filtre Advance</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter/filter.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter-selectARegionLabel" datatype="html">
+        <source>Select a Region</source>
+        <target>Sélectionnez une région</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter/filter.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter-selectaDistrictLabel" datatype="html">
+        <source>Select a District</source>
+        <target>Sélectionnez un district</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter/filter.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter-selectStoreLabel" datatype="html">
+        <source>Select a Store</source>
+        <target>Sélectionnez un magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter/filter.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="filter-filterReportButton" datatype="html">
+        <source>Filter Report</source>
+        <target>Rapport de filtrage</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/filter/filter.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalCount-finalCountTitle" datatype="html">
+        <source>Final Count</source>
+        <target>Décompte final</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/final-count/final-count.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalCount-downloadFinalCountFileLink" datatype="html">
+        <source>Download Final Count File</source>
+        <target>Télécharger le fichier Final Count</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/final-count/final-count.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ariaLabel-downloadFinalCountFile-printIcon" datatype="html">
+        <source>Print Button</source>
+        <target>Bouton d'impression</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/final-count/final-count.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-print" datatype="html">
+        <source>Print</source>
+        <target>Imprimer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/final-count/final-count.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalCount-skuColumnHeader" datatype="html">
+        <source>SKU</source>
+        <target>SKU</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/final-count/final-count.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalCount-itemDescriptionColumnHeader" datatype="html">
+        <source>Item Description</source>
+        <target>Description de l'article</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/final-count/final-count.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="finalCount-itemScannedColumnHeader" datatype="html">
+        <source>Item Scanned</source>
+        <target>Article scanné</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/final-count/final-count.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-inventoryStatusAreaDetails" datatype="html">
+        <source>Inventory Status - Area Details</source>
+        <target>État de l'inventaire - Détails de la zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-totalItemScanned" datatype="html">
+        <source>Total Item Scanned</source>
+        <target>Total de l'article scanné</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-skuColumnHeader" datatype="html">
+        <source>SKU</source>
+        <target>SKU</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-itemDescriptionColumnHeader" datatype="html">
+        <source>Item Description</source>
+        <target>Description de l'article</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-totalItemScannedColumnHeader" datatype="html">
+        <source>Total Items Scanned</source>
+        <target>Nombre total d'articles numérisés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-abandons" datatype="html">
+        <source>Abandons</source>
+        <target>Abandons</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-replacements" datatype="html">
+        <source>Replacements</source>
+        <target>Remplacements</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-audits" datatype="html">
+        <source>Audits</source>
+        <target>Audits</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-startTime" datatype="html">
+        <source>Start Time</source>
+        <target>Heure de début</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixtureDetails-stopTime" datatype="html">
+        <source>Stop Time</source>
+        <target>Heure d'arrêt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture-details/fixture-details.component.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-areaDetailFid" datatype="html">
+        <source>Area Detail</source>
+        <target>Détails de la zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-notStarted" datatype="html">
+        <source>Not Started</source>
+        <target>Non démarré</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-inProgress" datatype="html">
+        <source>In Progress</source>
+        <target>En cours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-audited" datatype="html">
+        <source>Audited</source>
+        <target>Audité</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-completed" datatype="html">
+        <source>Completed</source>
+        <target>Terminé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-areaColumnHeader" datatype="html">
+        <source>Area</source>
+        <target>Zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-startDateColumnHeader" datatype="html">
+        <source>Start Date</source>
+        <target>Date de début</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-endDateColumnHeader" datatype="html">
+        <source>End Date</source>
+        <target>Date de fin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-lastScannedColumnHeader" datatype="html">
+        <source>Last Scanned</source>
+        <target>Dernière numérisation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-itemsScannedColumnHeader" datatype="html">
+        <source>Items Scanned</source>
+        <target>Articles scannés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-discrepancyColumnHeader" datatype="html">
+        <source>Discrepancy</source>
+        <target>Discordance</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fixture-noRecordFound" datatype="html">
+        <source>No Record Found.</source>
+        <target>Aucun enregistrement n'a été trouvé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/fixture/fixture.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-itemDetailsTitle" datatype="html">
+        <source>Item Details</source>
+        <target>Détails de l'article</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-totalItemsScannedTitle" datatype="html">
+        <source>Total Items Scanned</source>
+        <target>Nombre total d'articles numérisés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ariaLabel-printButtonIcon" datatype="html">
+        <source>Print Button</source>
+        <target>Bouton d'impression</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-skuColumnHeader" datatype="html">
+        <source>SKU</source>
+        <target>SKU</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-itemDescriptionColumnHeader" datatype="html">
+        <source>Item Description</source>
+        <target>Description de l'article</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-itemScannedColumnHeader" datatype="html">
+        <source>Item Scanned</source>
+        <target>Article scanné</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-abandons" datatype="html">
+        <source>Abandons</source>
+        <target>Abandons</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-replacements" datatype="html">
+        <source>Replacements</source>
+        <target>Remplacements</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-audits" datatype="html">
+        <source>Audits</source>
+        <target>Audits</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-counts" datatype="html">
+        <source>Counts</source>
+        <target>Comptes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-startTime" datatype="html">
+        <source>Start Time :</source>
+        <target>Heure de début :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="item-stopTime" datatype="html">
+        <source>Stop Time :</source>
+        <target>Heure d'arrêt :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/item/item.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-reports-breadcrumbSeprator" datatype="html">
+        <source>/</source>
+        <target>/</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/reports/reports.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeComplete-inventoryStatus" datatype="html">
+        <source>Inventory Status -</source>
+        <target>État de l'inventaire -</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-complete/store-complete.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeComplete-inventoryStatusStores" datatype="html">
+        <source>Stores</source>
+        <target>Boutiques</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-complete/store-complete.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeInProgressReport-InventoryStatusTitle" datatype="html">
+        <source>Inventory Status - In Progress Stores</source>
+        <target>État du stock - Magasins en cours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-in-progress-report/store-in-progress-report.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeInProgressReport-NoRecordFound" datatype="html">
+        <source>No Record Found.</source>
+        <target>Aucun enregistrement n'a été trouvé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-in-progress-report/store-in-progress-report.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeListDetails-inventoryStatusTitle" datatype="html">
+        <source>Inventory Status - Store Detail</source>
+        <target>État du stock - Détails du magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-list-details/store-list-details.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeListDetails-areaColumnHeader" datatype="html">
+        <source>Area</source>
+        <target>Zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-list-details/store-list-details.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeListDetails-startDateColumnHeader" datatype="html">
+        <source>Start Date</source>
+        <target>Date de début</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-list-details/store-list-details.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeListDetails-endDateColumn" datatype="html">
+        <source>stop</source>
+        <target>arrête</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-list-details/store-list-details.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeListDetails-endDateColumnHeader" datatype="html">
+        <source>End Date</source>
+        <target>Date de fin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-list-details/store-list-details.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeListDetails-itemsScannedColumnHeader" datatype="html">
+        <source>Items Scanned</source>
+        <target>Articles scannés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/components/store-list-details/store-list-details.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reports-messages-userSwitchCountKey" datatype="html">
+        <source>Store is not started yet</source>
+        <target>Le magasin n'est pas encore démarré</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/reports/messages/reports.messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-assignment" datatype="html">
+        <source>assignment</source>
+        <target>affectation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-title" datatype="html">
+        <source>Store Setup</source>
+        <target>Configuration de la boutique</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-goToConfiguration" datatype="html">
+        <source>Go To Configuration</source>
+        <target>Aller à la configuration</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-status" datatype="html">
+        <source>Status</source>
+        <target>Statut</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-enterAreaInstanceTagIdentifier" datatype="html">
+        <source>Enter area instance tag identifier.</source>
+        <target>Entrez l'identifiant de balise d'instance de zone.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-AreaInstanceTagIdentifier" datatype="html">
+        <source>Area instance tag identifier.</source>
+        <target>Identificateur d'étiquette d'instance de zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-formPlaceholder-areaInstanceId" datatype="html">
+        <source>Area Instance ID</source>
+        <target>ID d'instance de zone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-downloadQrCodeButton" datatype="html">
+        <source>Download QR Code Button</source>
+        <target>Bouton Télécharger le code QR</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-vertical_align_bottom" datatype="html">
+        <source>vertical_align_bottom</source>
+        <target>vertical_align_bottom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-searchForTag" datatype="html">
+        <source>Search For Tag</source>
+        <target>Chercher une balise</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-changeTag" datatype="html">
+        <source>Change Tag</source>
+        <target>Changer de balise</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-totalAreas" datatype="html">
+        <source>Total Areas</source>
+        <target>Zones totales</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-used" datatype="html">
+        <source>Used</source>
+        <target>Occasion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-unused" datatype="html">
+        <source>Unused</source>
+        <target>Non utilisé</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-departmentsTitle" datatype="html">
+        <source>Departments</source>
+        <target>Départements</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-store" datatype="html">
+        <source>Store</source>
+        <target>Magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-formPlaceholder-store" datatype="html">
+        <source>Store</source>
+        <target>Magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-name" datatype="html">
+        <source>Name</source>
+        <target>Nom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-description" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-formPlaceholder-description" datatype="html">
+        <source>Description</source>
+        <target>Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-from" datatype="html">
+        <source>From</source>
+        <target>À partir de</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-formPlaceholder-from" datatype="html">
+        <source>From</source>
+        <target>À partir de</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-through" datatype="html">
+        <source>Through</source>
+        <target>À travers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-formPlaceholder-through" datatype="html">
+        <source>Through</source>
+        <target>À travers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-delete" datatype="html">
+        <source>delete</source>
+        <target>supprimer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-addNewDepartmentButton" datatype="html">
+        <source>Add New Department or Location</source>
+        <target>Ajouter un nouveau département ou un nouveau lieu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">193,194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-saveDepartmentsButton" datatype="html">
+        <source>Save</source>
+        <target>Économisez</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/components/store-setup/store-setup.component.html</context>
+          <context context-type="linenumber">202</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-messages-recordUpdated" datatype="html">
+        <source>Record Updated!</source>
+        <target>Enregistrement mis à jour !</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/messages/store-setup.messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-messages-incorrectAreaTagId" datatype="html">
+        <source>Incorrect Area Tag Id.</source>
+        <target>ID de balise de zone incorrect.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/messages/store-setup.messages.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-messages-sessionHasExpired" datatype="html">
+        <source>Session has expired.</source>
+        <target>La session a expiré.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/messages/store-setup.messages.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeSetup-messages-somethingWentWrong" datatype="html">
+        <source>Something went wrong.</source>
+        <target>Quelque chose s'est mal passé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/store-setup/messages/store-setup.messages.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword-title" datatype="html">
+        <source>Forgot Password</source>
+        <target>Mot de passe oublié</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword-cancelButton" datatype="html">
+        <source>Cancel</source>
+        <target>Annuler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPassword-submitButton" datatype="html">
+        <source>Submit</source>
+        <target>Soumettre</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-title" datatype="html">
+        <source>OmniCounts</source>
+        <target>Comptes OmniCs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-username-password" datatype="html">
+        <source>Username/Password</source>
+        <target>Nom d'utilisateur/mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-signInButton" datatype="html">
+        <source>Sign In</source>
+        <target>Connectez-vous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-getLoginLink" datatype="html">
+        <source>Get Login Link</source>
+        <target>Obtenir un lien de connexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-getLinkButton" datatype="html">
+        <source>Get Link</source>
+        <target>Obtenir un lien</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login-forgotPasswordButton" datatype="html">
+        <source>Forgot Password</source>
+        <target>Mot de passe oublié</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-reportProblem" datatype="html">
+        <source>report_problem</source>
+        <target>report_problem</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/magic-link/magic-link.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="magicLink-processOfVerifyingLinkMessage" datatype="html">
+        <source>Process of verifying link is going on. Please wait.</source>
+        <target>Le processus de vérification du lien est en cours. Veuillez patienter.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/magic-link/magic-link.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="magicLink-goToLoginLink" datatype="html">
+        <source>Go to login</source>
+        <target>Accédez à la connexion</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/components/magic-link/magic-link.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-emailMessage" datatype="html">
+        <source>Email</source>
+        <target>E-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-theUserdoesNotExist" datatype="html">
+        <source>The User does not exist.</source>
+        <target>L'utilisateur n'existe pas.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-usernameEmailMessage" datatype="html">
+        <source>Email</source>
+        <target>E-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-userIsNotRegisteredWithUs" datatype="html">
+        <source>User is not registered with us.</source>
+        <target>L'utilisateur n'est pas enregistré auprès de nous.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-usernamePasswordMessage" datatype="html">
+        <source>Password</source>
+        <target>mot de passe</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-getLoginLinkEmailMessage" datatype="html">
+        <source>Email</source>
+        <target>E-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-useTheForgottenPasswordLinkBelowToUpdate" datatype="html">
+        <source>Use the
+     forgotten password link below to update.</source>
+        <target>Utilisez le
+ lien de mot de passe oublié ci-dessous pour mettre à jour.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-passwordInvalid" datatype="html">
+        <source>Password invalid.</source>
+        <target>Mot de passe incorrect.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-pleaseBeSureYouAreUsingTheEmailAddress" datatype="html">
+        <source>Please be sure
+     you are using the email address where you received your login details.</source>
+        <target>S'il vous plaît soyez sûr
+ vous utilisez l'adresse e-mail à laquelle vous avez reçu vos informations de connexion.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-emailAddressIsNotRegisteredWithUs" datatype="html">
+        <source>Email address is not registered with us</source>
+        <target>L'adresse e-mail n'est pas enregistrée chez nous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-wrongPasswordMessage" datatype="html">
+        <source>Wrong password.</source>
+        <target>Mauvais mot de passe.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-sessionHasExpiredTitleMessage" datatype="html">
+        <source>Alert</source>
+        <target>Alerte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-sessionHasExpiredMessage" datatype="html">
+        <source>Your session has expired. Please log in again.</source>
+        <target>Votre session a expiré. Veuillez vous connecter à nouveau.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="core-messages-magicLinkHasExpired" datatype="html">
+        <source>This link has
+     expired. Please try to generate new one</source>
+        <target>Ce lien contient
+ expiré. Essayez d'en générer un nouveau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/auth/messages/auth.messages.ts</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-common-fieldIsRequired" datatype="html">
+        <source>Field is required.</source>
+        <target>Le champ est obligatoire.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-common-givenValueDoesNotMatch" datatype="html">
+        <source>The given value does not match.</source>
+        <target>La valeur donnée ne correspond pas.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-common-enterNumericValue" datatype="html">
+        <source>Please enter a value that is numeric.</source>
+        <target>Veuillez entrer une valeur numérique.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-common-enterValidLengthValue" datatype="html">
+        <source>Please enter a value with a valid length.</source>
+        <target>Veuillez saisir une valeur dont la longueur est valide.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-common-enterValidDate" datatype="html">
+        <source>Please enter a valid date.</source>
+        <target>Veuillez entrer une date valide.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-storeSetup-fieldIsRequired" datatype="html">
+        <source>Field is required</source>
+        <target>Le champ est obligatoire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-storeSetup-throughLessThanOrEqualToFrom" datatype="html">
+        <source>Invalid Value</source>
+        <target>Valeur non valide</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-storeSetup-duplicateName" datatype="html">
+        <source>Cannot be duplicated</source>
+        <target>Ne peut pas être dupliqué</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="form-messages-storeSetup-duplicateDescription" datatype="html">
+        <source>Cannot be duplicated</source>
+        <target>Ne peut pas être dupliqué</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/form/messages/form.messages.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customAlert-okayButton" datatype="html">
+        <source>Okay</source>
+        <target>OK.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/custom-alert/custom-alert.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="overallCompletionReport-title" datatype="html">
+        <source>Inventory Status - Overall Completion</source>
+        <target>État de l'inventaire - Achèvement global</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/overall-completion-report/overall-completion-report.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="overallCompletionReport-noRecordFound" datatype="html">
+        <source>No Record Found.</source>
+        <target>Aucun enregistrement n'a été trouvé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/overall-completion-report/overall-completion-report.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/overall-completion-report/overall-completion-report.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-store" datatype="html">
+        <source>store</source>
+        <target>magasin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeDetails-title" datatype="html">
+        <source>Store Details</source>
+        <target>Détails de la boutique</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeAddress-name" datatype="html">
+        <source>Name</source>
+        <target>Nom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeAddress-address" datatype="html">
+        <source>Address</source>
+        <target>Adresse</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeAddress-city" datatype="html">
+        <source>City</source>
+        <target>Ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeAddress-state" datatype="html">
+        <source>State</source>
+        <target>État</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeAddress-zipCode" datatype="html">
+        <source>Zip Code</source>
+        <target>Code postal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="storeAddress-phone" datatype="html">
+        <source>Phone</source>
+        <target>Téléphone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/store-address/store-address.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workspaceChanger-countLabel" datatype="html">
+        <source>Count</source>
+        <target>Comte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/workspace-changer/workspace-changer.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workspaceChanger-switchingCount" datatype="html">
+        <source>Switching Count</source>
+        <target>Nombre de commutation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/workspace-changer/workspace-changer.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ignore-materialIcon-swapvert" datatype="html">
+        <source>swap_vert</source>
+        <target>swap_vert</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/workspace-changer/workspace-changer.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workspaceChanger-switchYourCount" datatype="html">
+        <source>Switch your count</source>
+        <target>Changez de compte</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/shared/components/workspace-changer/workspace-changer.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
