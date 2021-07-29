@@ -26,8 +26,8 @@ function Generate(language, awsProfile, region, autoTranslate, inputSrcFile) {
     }
     filename += `.${constants.TRANSLATION_FILE_NAME_EXT}`;
     this.translationFilePath = `${this.translationOutDir}/${filename}`;
-    this.officialFilePath = `official/${filename}`;
-    this.developmentFilePath = `development/${filename}`;
+    this.officialFilePath = `src/locale/official/${filename}`;
+    this.developmentFilePath = `src/locale/development/${filename}`;
     // console.log(this.customTable)
     this.customTable.pushToTable({
         "Ready for dev file ": [this.developmentFilePath]
