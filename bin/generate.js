@@ -68,7 +68,7 @@ function findNewlyAddedKeys(srcTransUnit, officialTransUnits) {
         if (indexInOfficial === -1) {
             newKeys.push(trans)
             let row = {};
-            if (Object.keys(trans.target).length === 0 && trans.target.constructor === Object) {
+            if (!trans.target) {
                 trans.target = 'NEED TO TRANSLATE';
             }
             row[`${newKeys.length}`] = [trans['@id'], trans.source, trans.target]
