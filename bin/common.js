@@ -1,7 +1,7 @@
 'use strict;'
 const fs = require('fs');
 const path = require('path');
-const chkFileExist = async (filePath) => {
+const checkFileExists = async (filePath) => {
     return new Promise((resolve) => {
         fs.access(filePath, fs.F_OK, (err) => {
             if (err) {
@@ -56,5 +56,5 @@ module.exports = {
     createDir,
     fileWriter,
     fileReader,
-    chkFileExist
+    checkFileExists
 }

@@ -5,7 +5,8 @@ const common = require('./common');
 const constants = require('./constants')
 const CustomTable = require('./table')
 const {
-    trimAndRemoveNewLines
+    trimAndRemoveNewLines,
+    addBlankTargets
 } = require('./xlf-helper')
 const {
     getClient,
@@ -40,7 +41,7 @@ function Generate(language, awsProfile, region, autoTranslate, inputSrcFile) {
     })
 }
 async function checkOfficialExist() {
-    return common.chkFileExist(this.officialFilePath)
+    return common.checkFileExists(this.officialFilePath)
 }
 async function updateLanguageFile() {
     // console.log('updateLanguageFile-->',this);
@@ -155,7 +156,8 @@ async function autoTranslate(translationReadyJson) {
 
 Generate.prototype.start = async function () {
     try {
-        this.srcJsonData = await parseXlifSrc(this.inputSrcFile)
+        this.srcJsonData = await parseXlifSrc(this.inputSrcFile);
+        addBlankTargets(this.srcJsonData);
         const officialExist = await checkOfficialExist.call(this);
         // console.log('officialExist-->',officialExist)
         this.customTable.pushToTable({

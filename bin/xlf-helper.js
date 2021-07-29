@@ -187,6 +187,19 @@ const createBlankTranslatorFile = (jsonFileForTranslators) => {
     }
 }
 
+const addBlankTargets = (jsonFile) => {
+    // Write out file for translators with empty targets on sources without a target
+    const transUnit = jsonFile.xliff.file.body['trans-unit'];
+    for (const i in transUnit) {
+        // console.log(`${i} -> ${transUnit[i].source}`);
+        if (!transUnit[i]['target']) {
+            transUnit[i]['target'] = '';
+            // console.log(`Created target for: ${transUnit[i].source}`)
+        }
+    }
+}
+
+
 const trimAndRemoveNewLines = (inputString) => {
     let temp = [];
     if (typeof (inputString) === 'string') {
@@ -218,5 +231,5 @@ const fixInterpolationLessAndGreaterThans = (xmlFile) => {
 
 module.exports = {
     trimAndRemoveNewLines,
-    createBlankTranslatorFile
+    addBlankTargets
 }
