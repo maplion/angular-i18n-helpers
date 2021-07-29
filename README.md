@@ -1,5 +1,6 @@
 # Angular i18n Creation and Maintenance Helper
-This is a helper developed with the intent of making Angular 6 i18n a bit less tedious until they come up with their own, better solution(s) (which may or may not already exist, but I couldn't find them and I didn't have time to wait).
+
+This is a helper developed with the intent of making Angular i18n a bit less tedious until they come up with their own, better solution(s) (which may or may not already exist, but I couldn't find them and I didn't have time to wait).
 
 ## What this Helper Addresses
 
@@ -59,7 +60,7 @@ rxjs                            6.5.5
 typescript                      4.2.4
 ```
 
-## Usage Directions
+## Old Usage Directions
 
 01. If you haven't already, set up a Google Translate API Project: <https://cloud.google.com/translate/docs/reference/libraries#client-libraries-resources-nodejs>
 02. When setting up the Google Translate API Project, you should receive a json file; rename it to `google-translate-credentials.json` and overwrite the placeholder in the files that you have downloaded from this project.
@@ -83,3 +84,7 @@ and then typing `npm run i18n` whenever you wish to run it.
 01. Fix it so that multiple interpolations within a single tag are supported.
 02. Make it so if files don't exist, they are copied automatically on first run.
 03. Add better error-handling.
+
+## Updated Usage Directions
+
+(How to use the new version)
