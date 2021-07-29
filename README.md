@@ -84,6 +84,7 @@ and then typing `npm run i18n` whenever you wish to run it.
 01. Fix it so that multiple interpolations within a single tag are supported.
 02. Make it so if files don't exist, they are copied automatically on first run.
 03. Add better error-handling.
+04. Remove unused/unnecessary code
 
 ## Updated Usage Directions
 
