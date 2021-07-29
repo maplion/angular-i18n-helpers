@@ -56,7 +56,7 @@ async function updateLanguageFile() {
 
 function findNewlyAddedKeys(srcTransUnit, officialTransUnits) {
     let newKeys = []
-    let newKeyTable = new CustomTable(["S.No.", "@id", "Source", "Traget"], [10, 40, 50, 50])
+    let newKeyTable = new CustomTable(["S.No.", "@id", "Source", "Target"], [10, 40, 50, 50])
     // console.log(srcTransUnit[0])
     srcTransUnit.forEach((trans) => {
         let indexInOfficial = officialTransUnits.findIndex(officialTrans => officialTrans["@id"] === trans["@id"]);
@@ -85,7 +85,7 @@ function findNewlyAddedKeys(srcTransUnit, officialTransUnits) {
 function removeOrphanKeys(srcTransUnit, officialTransUnits) {
     let existingKeys = [];
     let removedKeys = [];
-    let removedKeysTable = new CustomTable(["S.No.", "@id", "Source", "Traget"], [10, 40, 50, 50])
+    let removedKeysTable = new CustomTable(["S.No.", "@id", "Source", "Target"], [10, 40, 50, 50])
     officialTransUnits.forEach(trans => {
         let indexInOfficial = srcTransUnit.findIndex(srcTrans => srcTrans["@id"] === trans["@id"]);
         if (indexInOfficial > -1) {
