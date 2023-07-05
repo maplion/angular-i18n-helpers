@@ -26,7 +26,7 @@
     "devDependencies": {
         "@aws-sdk/client-translate": "^3.22.0",
         "@aws-sdk/credential-provider-ini": "^3.22.0",
-        "@google-cloud/translate": "^6.2.2",
+        "@google-cloud/translate": "^7.2.2",
         "cli-table": "^0.3.6",
         "file-system": "^2.2.2",
         "xmlbuilder2": "^2.4.1",
