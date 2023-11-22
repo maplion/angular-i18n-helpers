@@ -24,7 +24,7 @@
     },
     "homepage": "https://github.com/maplion/angular-i18n-helpers#readme",
     "devDependencies": {
-        "@aws-sdk/client-translate": "^3.350.0",
+        "@aws-sdk/client-translate": "^3.454.0",
         "@aws-sdk/credential-provider-ini": "^3.22.0",
         "@google-cloud/translate": "^6.2.2",
         "cli-table": "^0.3.6",
